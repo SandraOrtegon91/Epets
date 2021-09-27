@@ -3,7 +3,7 @@ namespace Epets.App.Dominio.Entidades
 {
      /// <summary>
     /// Lista de Signos vitales
-    /// </summary>
+    /// </summary> 
     public enum TipoSigno
     {
         Temperatura,
