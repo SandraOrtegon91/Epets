@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {}
+    "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+    "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "projectUniqueName": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
         "projectName": "Epets.App.Dominio",
-        "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
+        "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\elkin\\.nuget\\packages\\",
+        "outputPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -53,7 +53,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

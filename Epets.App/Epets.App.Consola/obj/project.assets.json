@@ -5791,24 +5791,25 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Epets.App.Dominio >= 1.0.0",
       "Epets.App.Persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gerfa\\.nuget\\packages\\": {}
+    "C:\\Users\\elkin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+      "projectUniqueName": "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
       "projectName": "Epets.App.Consola",
-      "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
-      "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Consola\\obj\\",
+      "projectPath": "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+      "packagesPath": "C:\\Users\\elkin\\.nuget\\packages\\",
+      "outputPath": "C:\\MF\\Epets.App\\Epets.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5819,8 +5820,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
+            "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+              "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+            },
+            "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+              "projectPath": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
             }
           }
         }
@@ -5856,7 +5860,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

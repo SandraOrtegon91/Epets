@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Epets.App.Persistencia\Epets.App.Persistencia.csproj" />
+    <ProjectReference Include="..\Epets.App.Dominio\Epets.App.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
