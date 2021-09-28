@@ -73,7 +73,7 @@ namespace Epets.App.Persistencia.AppRepositorios
                    
                 }
             
-            return personaEncontrada;
+            return propietarioEncontrado;
         }
     }
 }

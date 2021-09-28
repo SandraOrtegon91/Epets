@@ -43,6 +43,40 @@ namespace Epets.App.Persistencia.AppRepositorios
             
             _appContext.Historias.Remove(historiaEncontrada);
             _appContext.SaveChanges();
+        }
 
+        //Implementacion metodo retornar todas las Historia
+        IEnumerable<Historia> IRepositorioHistoria.GetAllHistorias()
+        {
+            return _appContext.Historias;
+
+        }
+
+        //Implementacion metodo Retornar una Historia
+        Historia IRepositorioHistoria.GetHistoria(int IdHistoria)
+        {
+            return _appContext.Historias.FirstOrDefault(p => p.Id==IdHistoria);
+
+        }
+
+        //Implementacion metodo Actualizar Historia
+        Historia IRepositorioHistoria.UpdateHistoria(Historia historia)
+        {
+
+            var historiaEncontrada=_appContext.Historias.FirstOrDefault(p => p.Id==historia.Id);
+
+            if (historiaEncontrada!=null)
+                {
+                    historiaEncontrada.FechaVisita=historia.FechaVisita;
+                    historiaEncontrada.Recomendaciones=historia.Recomendaciones;
+                    historiaEncontrada.Medicamento=historia.Medicamento;
+                    historiaEncontrada.Signos=historia.Signos;
+
+                    _appContext.SaveChanges();
+                   
+                }
+            
+            return historiaEncontrada;
+        }
     }
 }
