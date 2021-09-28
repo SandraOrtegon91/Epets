@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "V4jlQkbedadhzy5QvrKzKktjeZVB5eVeeaMkLfJG+pIINjiYVdmEiYpSWj09rkE4h2wpQf9nJoY1yESZW9j99A==",
+=======
+  "dgSpecHash": "aS5qCfE8Gn9BJL1B82QH0R/fbSs+Yp1PxDgZgo6PxZT2W/wVU+L7X2eV4YSZkPhNwaCILRdKbVyJGkiEkEJCpg==",
+>>>>>>> 6b888e9a381ca3ce051ea91e26f7b3ca847bed2a
   "success": true,
   "projectFilePath": "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
   "expectedPackageFiles": [

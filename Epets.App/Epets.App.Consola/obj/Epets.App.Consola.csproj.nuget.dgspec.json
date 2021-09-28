@@ -25,11 +25,19 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
                 "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               },
               "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
                 "projectPath": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
+=======
+              "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              },
+              "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+                "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
+>>>>>>> 6b888e9a381ca3ce051ea91e26f7b3ca847bed2a
               }
             }
           }
