@@ -22,6 +22,5 @@ namespace Epets.App.Persistencia.AppRepositorios
 
         //Metodo para retornar una historia segun su Id
         Historia GetHistoria(int IdHistoria);
-
-    }
+r    }
 }
