@@ -32,7 +32,7 @@ namespace Epets.App.Persistencia.AppRepositorios
             return personaAdicionada.Entity;
         }
 
-        //Implementacion metodo Eliminar una persona 
+        //Implementacion metodo Eliminar una persona
         void IRepositorioPersona.DeletePersona(int IdPersona)
         {
             var personaEncontrada=_appContext.Personas.FirstOrDefault(p => p.Id==IdPersona);

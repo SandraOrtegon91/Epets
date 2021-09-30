@@ -11,28 +11,23 @@ namespace Epets.App.Dominio.Entidades
     /// </summary>   
 
     [Table("MedicoDb")]
-    1 reference
     public class Medico : Persona
     {
         [Column("Id")]
         [Key]
-        0 references
         public int IdMedico{get;set;}
 
         [Required]
         [Column("Nombre")]
         [StringLength(50,MinimumLength=5)]
-        0 references
         public string Nombre{get;set;}
       
         [Required]
         [Column("TarjetaProfesional")]
-        0 references
         //Identificador unico de cada profesional
         public int TarjetaProfesional{get;set;}
         
-        [ForeignKey("EspecialidadVeterinario")]
-        0 references        
+        [ForeignKey("EspecialidadVeterinario")]      
         ///Relacion entre la especialidad medica y el Médico  
         public virtual EspecialidadVeterinario Especialidad{get;set;}
     }
