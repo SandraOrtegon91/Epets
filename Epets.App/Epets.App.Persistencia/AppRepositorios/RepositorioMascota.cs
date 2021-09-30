@@ -27,7 +27,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Añadir Mascota
         Mascota IRepositorioMascota.AddMascota(Mascota mascota)
         {
-            var mascotaAdicionada=_appContext.Mascotas.Add(mascota);
+            var mascotaAdicionada=_appContext.mascotas.Add(mascota);
             _appContext.SaveChanges();
             return mascotaAdicionada.Entity;
         }
@@ -35,12 +35,12 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Eliminar una Mascota 
         void IRepositorioMascota.DeleteMascota(int IdMascota)
         {
-            var mascotaEncontrada=_appContext.Mascotas.FirstOrDefault(p => p.Id==IdMascota);
+            var mascotaEncontrada=_appContext.mascotas.FirstOrDefault(p => p.Id==IdMascota);
 
             if (mascotaEncontrada==null)
                 return ;
             
-            _appContext.Mascotas.Remove(mascotaEncontrada);
+            _appContext.mascotas.Remove(mascotaEncontrada);
             _appContext.SaveChanges();
 
         }
@@ -48,14 +48,14 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo retornar todas las Mascotas
         IEnumerable<Mascota> IRepositorioMascota.GetAllMascotas()
         {
-            return _appContext.Mascotas;
+            return _appContext.mascotas;
 
         }
 
         //Implementacion metodo Retornar una Mascota
         Mascota IRepositorioMascota.GetMascota(int IdMascota)
         {
-            return _appContext.Mascotas.FirstOrDefault(p => p.Id==IdMascota);
+            return _appContext.mascotas.FirstOrDefault(p => p.Id==IdMascota);
 
         }
 
@@ -63,7 +63,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         Mascota IRepositorioMascota.UpdateMascota(Mascota mascota)
         {
 
-            var mascotaEncontrada=_appContext.Mascotas.FirstOrDefault(p => p.Id==mascota.Id);
+            var mascotaEncontrada=_appContext.mascotas.FirstOrDefault(p => p.Id==mascota.Id);
 
             if (mascotaEncontrada!=null)
                 {

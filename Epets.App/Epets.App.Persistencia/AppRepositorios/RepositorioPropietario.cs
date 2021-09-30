@@ -25,9 +25,9 @@ namespace Epets.App.Persistencia.AppRepositorios
 
         //implementacion de los metodos de la interfaz
         //Implementacion metodo Añadir Propietario
-        Propietario IRepositoriPropietario.AddPropietario(Propietario propietario)
+        Propietario IRepositorioPropietario.AddPropietario(Propietario propietario)
         {
-            var propietarioAdicionado=_appContext.Propietarios.Add(propietario);
+            var propietarioAdicionado=_appContext.propietarios.Add(propietario);
             _appContext.SaveChanges();
             return propietarioAdicionado.Entity;
         }
@@ -35,27 +35,27 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Eliminar un Propietario 
         void IRepositorioPropietario.DeletePropietario(int IdPropietario)
         {
-            var propietarioEncontrado=_appContext.Propietarios.FirstOrDefault(p => p.Id==IdPropietario);
+            var propietarioEncontrado=_appContext.propietarios.FirstOrDefault(p => p.Id==IdPropietario);
 
             if (propietarioEncontrado==null)
                 return ;
             
-            _appContext.Propietarios.Remove(propietarioEncontrado);
+            _appContext.propietarios.Remove(propietarioEncontrado);
             _appContext.SaveChanges();
 
         }
 
         //Implementacion metodo retornar todas los Propietarios
-        IEnumerable<Propietario> IRepositorioPropietario.GetAllPersonaPropietarios()
+        IEnumerable<Propietario> IRepositorioPropietario.GetAllPropietarios()
         {
-            return _appContext.Propietarios;
+            return _appContext.propietarios;
 
         }
 
         //Implementacion metodo Retornar un Propietario
         Propietario IRepositorioPropietario.GetPropietario(int IdPropietario)
         {
-            return _appContext.Propietarios.FirstOrDefault(p => p.Id==IdPropietario);
+            return _appContext.propietarios.FirstOrDefault(p => p.Id==IdPropietario);
 
         }
 
@@ -63,11 +63,11 @@ namespace Epets.App.Persistencia.AppRepositorios
         Propietario IRepositorioPropietario.UpdatePropietario(Propietario propietario)
         {
 
-            var propietarioEncontrado=_appContext.Propietarios.FirstOrDefault(p => p.Id==propietario.Id);
+            var propietarioEncontrado=_appContext.propietarios.FirstOrDefault(p => p.Id==propietario.Id);
 
             if (propietarioEncontrado!=null)
                 {
-                    propietarioEncontrado.Direccion=Propietario.Direccion;
+                    propietarioEncontrado.Direccion=propietario.Direccion;
 
                     _appContext.SaveChanges();
                    

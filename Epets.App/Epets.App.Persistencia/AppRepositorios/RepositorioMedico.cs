@@ -27,7 +27,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Añadir Medico
         Medico IRepositorioMedico.AddMedico(Medico medico)
         {
-            var medicoAdicionado=_appContext1.Medicos.Add(medico);
+            var medicoAdicionado=_appContext1.medicos.Add(medico);
             _appContext1.SaveChanges();
             return medicoAdicionado.Entity;
         }
@@ -35,12 +35,12 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Eliminar un medico 
         void IRepositorioMedico.DeleteMedico(int IdMedico)
         {
-            var medicoEncontrado=_appContext1.Medicos.FirstOrDefault(p => p.Id==IdMedico);
+            var medicoEncontrado=_appContext1.medicos.FirstOrDefault(p => p.Id==IdMedico);
 
             if (medicoEncontrado==null)
                 return ;
             
-            _appContext1.Medicos.Remove(medicoEncontrado);
+            _appContext1.medicos.Remove(medicoEncontrado);
             _appContext1.SaveChanges();
 
         }
@@ -48,14 +48,14 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo retornar todos los medicos
         IEnumerable<Medico> IRepositorioMedico.GetAllMedicos()
         {
-            return _appContext1.Medicos;
+            return _appContext1.medicos;
 
         }
 
         //Implementacion metodo Retornar un medico
         Medico IRepositorioMedico.GetMedico(int IdMedico)
         {
-            return _appContext1.Medicos.FirstOrDefault(m => m.Id==IdMedico);
+            return _appContext1.medicos.FirstOrDefault(m => m.Id==IdMedico);
 
         }
 
@@ -63,12 +63,12 @@ namespace Epets.App.Persistencia.AppRepositorios
         Medico IRepositorioMedico.UpdateMedico(Medico medico)
         {
 
-            var medicoEncontrado=_appContext1.Medicos.FirstOrDefault(m => m.Id==medico.Id);
+            var medicoEncontrado=_appContext1.medicos.FirstOrDefault(m => m.Id==medico.Id);
 
             if (medicoEncontrado!=null)
                 {
                     medicoEncontrado.TarjetaProfesional=medico.TarjetaProfesional;
-                    medicoEncontrado.Especialidad=medico.Especialidad;
+                    medicoEncontrado.EspecialidadVeterinario=medico.EspecialidadVeterinario;
 
                     _appContext1.SaveChanges();
                    

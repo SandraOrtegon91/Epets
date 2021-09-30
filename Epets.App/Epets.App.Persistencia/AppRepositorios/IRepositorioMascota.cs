@@ -9,7 +9,7 @@ namespace Epets.App.Persistencia.AppRepositorios
          //firma de los metodos
 
         //Metodo para retornar todas las mascotas
-        IEnumerable<Mascota> GetAllMascota();
+        IEnumerable<Mascota> GetAllMascotas();
 
         //metodo para adicionar una mascotas
         Mascota AddMascota(Mascota mascota);

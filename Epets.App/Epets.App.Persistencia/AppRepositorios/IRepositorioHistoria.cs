@@ -15,7 +15,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         Historia AddHistoria(Historia historia);
 
         //Metodo para Actualizar Historia
-        Historia UpdatePersona(Historia historia);
+        Historia UpdateHistoria(Historia historia);
 
         //Metodo para Eliminar Historia
         void DeleteHistoria (int IdHistoria);
