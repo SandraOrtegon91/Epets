@@ -24,6 +24,23 @@
 
     }
 
+    #btnConsultar:hover{
+        background-color: #BBBBBB;
+    }
+
+     #btnRegistrar:hover{
+        background-color: #0DC7E5;
+    }
+
+    #btnActualizar:hover{
+        background-color: #10D691;
+    }
+
+    #btnEliminar:hover{
+        background-color: #FE5D6E;
+    }
+
+
     #imagen {
         border-top-left-radius: 70%;
     }
@@ -120,7 +137,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-5 col-sm-12">
             <div class="page-section">
                 <div class="container">
                     <div class="row">
@@ -131,18 +148,18 @@
                         </div>
                     </div>
                     <form class="main-form">
-                        <div class="row" style="margin-bottom: 20px;">
+                        <div class="row">
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Cedula">
+                                <input type="text" class="form-control" placeholder="Digite Cedula" style="margin-bottom: 20px;">
                             </div>
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Nombres">
+                                <input type="text" class="form-control" placeholder="Digite Nombres" style="margin-bottom: 20px;">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
 
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Apellidos">
+                                <input type="text" class="form-control" placeholder="Digite Apellidos" style="margin-bottom: 20px;">
                             </div>
 
                             <div class="col-md-6 ">
@@ -151,7 +168,7 @@
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
                             <div class="col-md-12 ">
-                                <select name="Tipo Animal" id="Especialidad" class="custom-select">
+                                <select name="Tipo Animal" id="Especialidad" class="custom-select" style="margin-bottom: 20px;">
                                     <option value="Elija opcion">--Elija Especialidad--</option>
                                     <option value="Opcion Perro">Perro</option>
                                     <option value="Opcion Gato">Gato</option>
@@ -166,20 +183,20 @@
 
 
                         <div class="row">
-                            <button type="submit" class="btn btn-secondary mt-3 wow zoomIn"
+                            <button id="btnConsultar" type="submit" class="btn btn-secondary mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Consultar</button>
-                            <button type="submit" class="btn btn-primary mt-3 wow zoomIn"
+                            <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Registrar</button>
-                            <button type="submit" class="btn btn-success mt-3 wow zoomIn"
+                            <button id="btnActualizar" type="submit" class="btn btn-success mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
-                            <button type="submit" class="btn btn-danger mt-3 wow zoomIn"
+                            <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-7 col-sm-12">
             <caption>Mascotas a Cargo</caption>
             <table class="table">
                 <!-- <Mascotas a Cargo</caption>-->
