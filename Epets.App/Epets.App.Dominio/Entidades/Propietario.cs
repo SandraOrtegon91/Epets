@@ -27,7 +27,7 @@ namespace Epets.App.Dominio.Entidades
         //Direccion del Propietario
         public string Direccion{get;set;}
         
-    //    [ForeignKey("SolicitudVisita")]
+    //  [ForeignKey("SolicitudVisita")]
     //    0 references
         ///  Referencia a la lista de Solicitud de visita  
         public System.Collections.Generic.List<SolicitudVisita> SolicitudVisita{get;set;}

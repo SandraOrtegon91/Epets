@@ -46,3 +46,15 @@ C:\MF\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persis
 C:\MF\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete
 C:\MF\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
 C:\MF\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.deps.json
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.dll
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.pdb
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csprojAssemblyReference.cache
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfoInputs.cache
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfo.cs
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb

@@ -34,3 +34,12 @@ C:\MF\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.Ass
 C:\MF\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csproj.CoreCompileInputs.cache
 C:\MF\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.dll
 C:\MF\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.pdb
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.deps.json
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.dll
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.pdb
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csprojAssemblyReference.cache
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.AssemblyInfoInputs.cache
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.AssemblyInfo.cs
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.dll
+C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.pdb

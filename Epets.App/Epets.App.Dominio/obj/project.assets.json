@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
       "projectName": "Epets.App.Dominio",
-      "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+      "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
+      "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
