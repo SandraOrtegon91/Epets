@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zj1ATJ70bnUtD2dbDIoTAe/tcUsW72hKLctsMeujPqJ88OiS0KC0AslwwMKvLxk/XMcfi1kv1I3I8h/iUuRRTw==",
+  "success": true,
+  "projectFilePath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gerfa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gerfa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

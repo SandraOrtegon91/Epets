@@ -1,0 +1,247 @@
+﻿@page
+@model Epets.App.Presentacion.Pages.InicioPropietarioModel
+@{
+    ViewData["Title"] = "E-Pets-Propietarios";
+}
+<style>
+    tr:hover {
+        background-color: rgb(252, 255, 95);
+    }
+
+    #jhan {
+        border-radius: 150%;
+        height: 50px;
+        width: 50px;
+        font-size: 1px;
+
+    }
+    #BannerPropietarios{
+        
+        
+        background-image: url("../img/Banner_Dueños.jpg");
+    }
+
+    #jhan:hover {
+        border-radius: 0%;
+        height: 50px;
+        width: 100px;
+        font-size: 30px;
+
+    }
+
+    #btnConsultar:hover{
+        background-color: #BBBBBB;
+    }
+
+     #btnRegistrar:hover{
+        background-color: #0DC7E5;
+    }
+
+    #btnActualizar:hover{
+        background-color: #10D691;
+    }
+
+    #btnEliminar:hover{
+        background-color: #FE5D6E;
+    }
+
+
+    #imagen {
+        border-top-left-radius: 70%;
+    }
+
+    #Cardimagen:hover #imagen {
+        border-top-left-radius: 0px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <h1 class="display-4">Bienvenido a Propietarios</h1>
+                <p>MinTic-2021 <a href="/Grupo_4/InicioGrupo_4">Grupo_4</a>.</p>
+            </div>
+
+            <div id="BannerPropietarios" class="page-banner overlay-dark bg-image">
+                <div class="banner-section">
+                    <div class="container text-center wow fadeInUp">
+                        <nav aria-label="Breadcrumb">
+                            <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                                <li class="breadcrumb-item"><a href="/Index">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Propietarios</li>
+                            </ol>
+                        </nav>
+                        <h1 class="font-weight-normal">Nuestros Propietarios</h1>
+                    </div> <!-- .container -->
+                </div> <!-- .banner-section -->
+            </div> <!-- .page-banner -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <div class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center;">
+                            <label>
+                                <h1 class="text-center wow fadeInUp">CRUD Propietarios</h1>
+                            </label>
+                        </div>
+                    </div>
+                    <form class="main-form">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input type="text" class="form-control" placeholder="Digite Cedula" style="margin-bottom: 20px;">
+                            </div>
+                            <div class="col-md-6 ">
+                                <input type="text" class="form-control" placeholder="Digite Nombres" style="margin-bottom: 20px;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+
+                            <div class="col-md-6 ">
+                                <input type="text" class="form-control" placeholder="Digite Apellidos" style="margin-bottom: 20px;">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <input type="text" class="form-control" placeholder="Digite Direccion">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                             <div class="col-md-6 ">
+                                <input type="text" class="form-control" placeholder="Digite Telefono">
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="row">
+                            <button id="btnConsultar" type="submit" class="btn btn-secondary mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Consultar</button>
+                            <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Registrar</button>
+                            <button id="btnActualizar" type="submit" class="btn btn-success mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
+                            <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <caption><h4>Listado Propietarios</h4></caption>
+            <table class="table">
+                <!-- <Mascotas a Cargo</caption>-->
+                <thead>
+                    <tr class="bg-warning" id="tablaj">
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Nombres </th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Telefono</th>
+                       
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+
+                        <td>1106789789</td>
+                        <td>Samuel</td>
+                        <td>Rodriguez</td>
+                        <td>O2345RGH</td>
+                        <td>3112345432</td>
+                        
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+
+                        <td>1110524169</td>
+                        <td>German</td>
+                        <td>Ospina</td>
+                        <td>234520ULB</td>
+                        <td>3214748012</td>
+                        
+                    </tr>
+                    <tr>
+                         <th scope="row">3</th>
+                        <td>1105682311</td>
+                        <td>Sandra</td>
+                        <td>Ortegon</td>
+                        <td>1789005YUO</td>
+                        <td>3133958228</td>
+                        
+
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                         <td>1021067801</td>
+                        <td>Jhan</td>
+                        <td>Meneses</td>
+                        <td>567296HYTR</td>
+                        <td>3124567890</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <caption><h4>Listado de Visitas</h4></caption>
+            <table class="table">
+                <!-- <caption>Listado De visitas</caption>-->
+                <thead>
+                    <tr class="bg-warning" id="tablaj">
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Nombre Mascota</th>
+                        <th scope="col">Tipo Animal</th>
+                        <th scope="col">Fecha y Hora</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Estado Visita</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Roberto</td>
+                        <td>Pajaro</td>
+                        <td>10-10-2021 10:12 am</td>
+                        <td>manz 9 casa 17 Espinal-Tolima</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Kira</td>
+                        <td>Gato</td>
+                        <td>15-10-2021</td>
+                        <td>Calle 4 Ibague-Tolima</td>
+                        <td>Pendiente</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Otto</td>
+                        <td>Perro</td>
+                        <td>30-09-2021 2:45 pm</td>
+                        <td>Carrera 1 # 2-34 Espinal-Tolima</td>
+                        <td>Realizada</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Kira</td>
+                        <td>Gato</td>
+                        <td>30-09-2021 4:40pm</td>
+                        <td>Calle 4 Ibague-Tolima</td>
+                        <td>Realizada</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+</div> <!-- .page-section -->
+
