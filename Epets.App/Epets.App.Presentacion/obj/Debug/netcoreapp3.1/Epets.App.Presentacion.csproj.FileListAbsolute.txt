@@ -79,6 +79,12 @@ C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\stati
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Epets.App.Presentacion.dll
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Epets.App.Presentacion.pdb
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Epets.App.Presentacion.genruntimeconfig.cache
-C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\CRUDMedico.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\BuscarMedico.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\InicioMedico.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Agendamiento\InicioAgendamiento.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Contactos\InicioContacto.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\InicioEmpresa.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\InicioMascota.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\InicioPropietario.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Sesion\InicioSesion.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Visitas\InicioVisitas.cshtml.g.cs
