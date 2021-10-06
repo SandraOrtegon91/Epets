@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Epets.App.Persistencia.AppData
 {
     public class MfAppContext:DbContext
+    
     {
         public DbSet<Persona> personas{get;set;} //propiedad
         public DbSet<Medico> medicos{get;set;} //propiedad

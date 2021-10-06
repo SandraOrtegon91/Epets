@@ -16,6 +16,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  
 
   <ItemGroup>
     <ProjectReference Include="..\Epets.App.Dominio\Epets.App.Dominio.csproj" />

@@ -6,6 +6,7 @@ namespace Epets.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioHistoria
     {
+        
          //firma de los metodos
 
         //Metodo para retornar todas las historias

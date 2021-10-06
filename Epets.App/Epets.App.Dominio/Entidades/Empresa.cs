@@ -10,6 +10,7 @@ namespace Epets.App.Dominio.Entidades
     /// Modela una empresa Veterinaria que tiene medicos veterinarios
     /// </summary>
 
+
  //   [Table("EmpresaDb")]
    // 1 reference
     public class Empresa
