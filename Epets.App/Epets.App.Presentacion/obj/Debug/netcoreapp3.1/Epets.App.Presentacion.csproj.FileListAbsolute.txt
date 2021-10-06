@@ -88,3 +88,4 @@ C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\InicioPropietario.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Sesion\InicioSesion.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Visitas\InicioVisitas.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Grupo_4\InicioGrupo_4.cshtml.g.cs
