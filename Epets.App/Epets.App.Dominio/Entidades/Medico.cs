@@ -17,7 +17,7 @@ namespace Epets.App.Dominio.Entidades
     //    [Column("Id")]
     //    [Key]
     //    0 references
-        public int Id{get;set;}
+        public int IdMedico{get;set;}
 
     //    [Required]
     //    [Column("Nombre")]
