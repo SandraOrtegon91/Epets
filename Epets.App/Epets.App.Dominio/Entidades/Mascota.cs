@@ -9,57 +9,59 @@ namespace Epets.App.Dominio.Entidades
     /// por un Medico veterinario
     /// </summary>   
 
-  //  [Table("MascotaDb")]
+    [Table("MascotaDb")]
     public class Mascota
     {
-  //      [Column("Id")]
-  //      [Key]
+        [Column("Id")]
+        [Key]
         // Identificador único de cada Mascota
-        public int Id{get;set;}
+        public int IdMascota{get;set;}
         
-   //     [Required]
-   //     [Column("NombreMascota")]
-   //     [StringLength(10,MinimumLength=5)]
+        [Required]
+        [Column("NombreMascota")]
+        [StringLength(10,MinimumLength=5)]
         //Nombre de La Mascota
         public string NombreMascota{get;set;}
         
-    //    [Required]
-    //    [Column("ColorOjos")]
-    //    [StringLength(10,MinimumLength=5)]
+        [Required]
+        [Column("ColorOjos")]
+        [StringLength(10,MinimumLength=5)]
         //Color de Ojos de la Mascota
         public string ColorOjos{get;set;}
         
-    //    [Required]
-    //    [Column("ColorPiel")]
-    //    [StringLength(10,MinimumLength=5)]
+        [Required]
+        [Column("ColorPiel")]
+        [StringLength(10,MinimumLength=5)]
         //Color del pelaje o plumaje de la Mascota
         public string ColorPiel{get;set;}
         
-    //    [Required]
-    //    [Column("Estatura")]
+        [Required]
+        [Column("Estatura")]
         //Estatura de la Mascota
         public float Estatura{get;set;}
         
-    //    [Required]
-    //    [Column("Raza")]
-    //    [StringLength(10,MinimumLength=5)]
+        [Required]
+        [Column("Raza")]
+        [StringLength(10,MinimumLength=5)]
         //Raza de la mascota
         public string Raza{get;set;}
         
-    //    [ForeignKey("Propietario")]
-        /// Relacion entre el propietario y la Mascota
+        [Required]
+        [Column("TipoMascota")]
+        [StringLength(15,MinimumLength=5)]
+        //Tipo de la mascota
+        public string TipoMascota{get;set;}
+
+        [ForeignKey("Propietario")]
+        // Relacion entre el propietario y la Mascota
         public Propietario Propietario{get;set;}
         
-    //    [ForeignKey("Medico")]
-        /// Relacion entre el Medico y la Mascota
+        [ForeignKey("Medico")]
+        // Relacion entre el Medico y la Mascota
         public Medico Medico{get;set;}
         
-    //    [ForeignKey("TipoAnimal")]
-        /// Relacion entre el Tipo de Animal y la Mascota
-        public TipoAnimal TipoAnimal{get;set;}
-        
-    //    [ForeignKey("Historia")]
-        /// Relacion entre Mascota y su Historia clínica
+        [ForeignKey("Historia")]
+        // Relacion entre Mascota y su Historia clínica
         public Historia Historia{get;set;}
     }
 }
