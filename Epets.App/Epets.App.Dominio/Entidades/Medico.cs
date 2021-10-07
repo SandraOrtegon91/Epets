@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-//using System.ComponentModel.DataAnnotations;
-//using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace Epets.App.Dominio.Entidades
@@ -10,30 +10,22 @@ namespace Epets.App.Dominio.Entidades
     /// Modela un medico Veterinario que atiende una Mascota
     /// </summary>   
 
-   // [Table("MedicoDb")]
-   // 1 reference
+    [Table("MedicoDb")]
     public class Medico : Persona
     {
-    //    [Column("Id")]
-    //    [Key]
-    //    0 references
-        public int IdMedico{get;set;}
 
-    //    [Required]
-    //    [Column("Nombre")]
-    //    [StringLength(50,MinimumLength=5)]
-    //    0 references
-        //public string Nombre{get;set;}
+        [Column("Id")]
+        [Key]
+        public int IdMedico{get;set;}
+ 
       
-    //    [Required]
-    //    [Column("TarjetaProfesional")]
-    //    0 references
+        [Required]
+        [Column("TarjetaProfesional")]
         //Identificador unico de cada profesional
         public int TarjetaProfesional{get;set;}
         
-     //   [ForeignKey("EspecialidadVeterinario")]
-     //   0 references        
-        ///Relacion entre la especialidad medica y el Médico  
-        public Especialidad EspecialidadVeterinario{get;set;}
+        [ForeignKey("EspecialidadMascota")]      
+        //Relacion entre la especialidad medica y el Médico  
+        public string EspecialidadMascota{get;set;}
     }
 }

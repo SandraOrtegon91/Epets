@@ -6,71 +6,70 @@ using Epets.App.Persistencia.AppData;
 
 namespace Epets.App.Persistencia.AppRepositorios
 {
-    public class RepositorioMedico: IRepositorioMedico
-    {
+    public class RepositorioMedico :IRepositorioMedico
+ {
         /// <summary>
-        /// Referencia al contexto del Medico
+        /// Referencia al contexto de la Medico
         /// </summary>
-        private readonly MfAppContext _appContext1;
+        private readonly MfAppContext _appContext;
 
         /// <summary>Metodo constructor
         /// que utiliza la inyeccion de dependencias
         /// para indicar el contexto a utilizar </summary>
-        /// <param name="appContext1"></param>
-        ///  
+        /// <param name="appContext"></param>
+  
         public RepositorioMedico(MfAppContext appContext)
         {
-            _appContext1=appContext;
+            _appContext=appContext;
         } 
 
         //implementacion de los metodos de la interfaz
         //Implementacion metodo Añadir Medico
         Medico IRepositorioMedico.AddMedico(Medico medico)
         {
-            var medicoAdicionado=_appContext1.medicos.Add(medico);
-            _appContext1.SaveChanges();
+            var medicoAdicionado=_appContext.Medicos.Add(medico);
+            _appContext.SaveChanges();
             return medicoAdicionado.Entity;
         }
 
-        //Implementacion metodo Eliminar un medico 
+        //Implementacion metodo Eliminar una Medico 
         void IRepositorioMedico.DeleteMedico(int IdMedico)
         {
-            var medicoEncontrado=_appContext1.medicos.FirstOrDefault(p => p.Id==IdMedico);
+            var medicoEncontrado=_appContext.Medicos.FirstOrDefault(p => p.Id==IdMedico);
 
             if (medicoEncontrado==null)
                 return ;
             
-            _appContext1.medicos.Remove(medicoEncontrado);
-            _appContext1.SaveChanges();
+            _appContext.Medicos.Remove(medicoEncontrado);
+            _appContext.SaveChanges();
 
         }
 
-        //Implementacion metodo retornar todos los medicos
+        //Implementacion metodo retornar todos los Medicos
         IEnumerable<Medico> IRepositorioMedico.GetAllMedicos()
         {
-            return _appContext1.medicos;
+            return _appContext.Medicos;
 
         }
 
-        //Implementacion metodo Retornar un medico
+        //Implementacion metodo Retornar un Medico
         Medico IRepositorioMedico.GetMedico(int IdMedico)
         {
-            return _appContext1.medicos.FirstOrDefault(m => m.Id==IdMedico);
+            return _appContext.Medicos.FirstOrDefault(p => p.Id==IdMedico);
 
         }
 
-        //Implementacion metodo Actualizar medico
+        //Implementacion metodo Actualizar Medico
         Medico IRepositorioMedico.UpdateMedico(Medico medico)
         {
-
-            var medicoEncontrado=_appContext1.medicos.FirstOrDefault(m => m.Id==medico.Id);
+            var medicoEncontrado=_appContext.Medicos.FirstOrDefault(p => p.Id==medico.Id);
 
             if (medicoEncontrado!=null)
                 {
                     medicoEncontrado.TarjetaProfesional=medico.TarjetaProfesional;
-                    medicoEncontrado.EspecialidadVeterinario=medico.EspecialidadVeterinario;
+                    medicoEncontrado.EspecialidadMascota=medico.EspecialidadMascota;
 
-                    _appContext1.SaveChanges();
+                    _appContext.SaveChanges();
                    
                 }
             

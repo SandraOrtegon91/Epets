@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-//using System.ComponentModel.DataAnnotations;
-//using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Epets.App.Dominio.Entidades
 {
@@ -10,40 +8,33 @@ namespace Epets.App.Dominio.Entidades
     /// Modela una empresa Veterinaria que tiene medicos veterinarios
     /// </summary>
 
-
- //   [Table("EmpresaDb")]
-   // 1 reference
+    [Table("EmpresaDb")]
     public class Empresa
     {
-     //   [Column("Id")]
-       // [Key]
-      //  0 references
-        // Identificador único de la Empresa
+        [Column("Id")]
+        [Key]
+        //Identificador único de la Empresa
         public int Id{ get; set; }
         
-       // [Required]
-        //[Column("Nombre")]
-        //[StringLength(50,MinimumLength=5)]
-        //0 references
+        [Required]
+        [Column("Nombre")]
+        [StringLength(50,MinimumLength=5)]
         //Nombre de la empresa
         public string Nombre { get; set; }
         
-     //   [Required]
-     //   [Column("Nit")]
-     //   0 references
+        [Required]
+        [Column("Nit")]
         //Nit de la empresa
         public int Nit { get; set; }
         
-      //  [Required]
-      //  [Column("Direccion")]
-      //  [StringLength(50,MinimumLength=5)]
-      //  0 references
+        [Required]
+        [Column("Direccion")]
+        [StringLength(50,MinimumLength=5)]
         //Direccion de la empresa
         public string Direccion { get; set; }
 
-      //  [ForeignKey("Medico")]
-      //  0 references
-        ///  Relacion a la lista de Medicos con la empresa
-        public System.Collections.Generic.List<Medico> MedicosVinculados{ get; set;}
+        [ForeignKey("Medico")]
+        //Relacion a la lista de Medicos con la empresa
+        public System.Collections.Generic.List<Medico> MedicosVinculados{get;set;}
     }
 }

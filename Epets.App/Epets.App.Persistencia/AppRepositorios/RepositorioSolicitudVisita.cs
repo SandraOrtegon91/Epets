@@ -11,6 +11,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         /// <summary>
         /// Referencia al contexto de la SolicitudVisita
         /// </summary>
+        
         private readonly MfAppContext _appContext;
 
         /// <summary>Metodo constructor
@@ -71,11 +72,9 @@ namespace Epets.App.Persistencia.AppRepositorios
                     solicitudVisitaEncontrada.FechaVisita=solicitudVisita.FechaVisita;
                     solicitudVisitaEncontrada.Propietario=solicitudVisita.Propietario;
                     solicitudVisitaEncontrada.NombreMascota=solicitudVisita.NombreMascota;
-                    solicitudVisitaEncontrada.TipoAnimal=solicitudVisita.TipoAnimal;
-                    solicitudVisitaEncontrada.Especialidad=solicitudVisita.Especialidad;
-
-                    _appContext.SaveChanges();
-                   
+                    //solicitudVisitaEncontrada.TipoAnimal=solicitudVisita.TipoAnimal;
+                    //solicitudVisitaEncontrada.Especialidad=solicitudVisita.Especialidad;
+                    _appContext.SaveChanges();        
                 }
             
             return solicitudVisitaEncontrada;
