@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
-namespace Epets.App.Dominio.Entidades
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Epets.App.Dominio.Entidades
 {
    /// <summary>Class <c>Historia</c>
     /// Modela la Historia clínica relacionada con la atencion de la Mascota
