@@ -5,41 +5,42 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Epets.App.Dominio.Entidades
 {
-   /// <summary>Class <c>Historia</c>
+    /// <summary>Class <c>Historia</c>
     /// Modela la Historia clínica relacionada con la atencion de la Mascota
     /// </summary>    
     
-  //  [Table("Historia")]
+    [Table("Historia")]
     public class Historia
     {
-    //    [Column("Id")]
-    //    [Key]
+        [Column("Id")]
+        [Key]
         // Identificador único de la Historia
-        public int Id { get; set; }
+        public int IdHistoria { get; set; }
         
-    //    [Required]
-    //    [Column("DateTime")]
-    //    [StringLength(12,MinimumLength=6)]
+        [Required]
+        [Column("DateTime")]
+        [StringLength(12,MinimumLength=6)]
         public DateTime FechaVisita{get;set;} //DateTime
         
-    //    [Required]
-    //    [Column("Recomendaciones")]
-    //    [StringLength(50,MinimumLength=5)]
-     //   public string Recomendaciones{get;set;}
+        [Required]
+        [Column("Recomendaciones")]
+        [StringLength(50,MinimumLength=5)]
+        public string Recomendaciones{get;set;}
         
-    //    [Required]
-    //    [Column("Medicamento")]
-    //    [StringLength(20,MinimumLength=5)]
+        [Required]
+        [Column("Medicamento")]
+        [StringLength(20,MinimumLength=5)]
         public string Medicamento{get;set;}
         
-    //    [ForeignKey("SignoVital")]
+        [ForeignKey("SignoVital")]
         public SignoVital Signos{get;set;}
         
-    //    [ForeignKey("SignoVitale")]
+        [ForeignKey("SignoVital")]
         //Referencia a la lista de signos vitales de una mascota
         public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
-        
+
+        [ForeignKey("RecomendacionesCuidado")]
         // Referencia la lista de sugerencias registradas en la Historia del Paciente
-        public System.Collections.Generic.List<RecomendacionesCuidado> Recomendaciones { get; set; }
+        public List<RecomendacionesCuidado> RecomendacionesCuidados { get; set; }
     }
 }
