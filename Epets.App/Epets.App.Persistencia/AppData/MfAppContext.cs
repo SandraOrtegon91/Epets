@@ -5,24 +5,25 @@ using Microsoft.EntityFrameworkCore;
 namespace Epets.App.Persistencia.AppData
 {
     public class MfAppContext:DbContext
-    
     {
-        public DbSet<Persona> personas{get;set;} //propiedad
-        public DbSet<Medico> medicos{get;set;} //propiedad
-        public DbSet<Propietario> propietarios{get;set;} //propiedad
-        public DbSet<Mascota> mascotas{get;set;} //propiedad
-        public DbSet<Empresa> empresa{get;set;} //propiedad
-        public DbSet<SolicitudVisita> SolicitudVisitas{get;set;}//Propiedad
-        public DbSet<Historia> historias{get;set;}//Propiedad
-        
-
-        
+        //propiedades del dominio
+        public DbSet<Epets.App.Dominio.Entidades.Empresa> Empresa {get;set;}
+//        public DbSet<Epets.App.Dominio.Entidades.Especialidad> Especialidad {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.Historia> Historias {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.Mascota> Mascotas {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.Medico> Medicos {get;set;}
+        public DbSet<Persona> Personas {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.Propietario> Propietarios {get;set;} 
+        public DbSet<Epets.App.Dominio.Entidades.RecomendacionesCuidado> RecomendacionesCuidados {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.SignoVital> SignosVitales {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.SolicitudVisita> SolicitudVisitas {get;set;}
+//        public DbSet<Epets.App.Dominio.Entidades.TipoAnimal> TipoAnimal {get;set;}
+//        public DbSet<Epets.App.Dominio.Entidades.TipSigno> TipoSignos {get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data source =(localdb)\\MSSQLLocalDB; Initial Catalog = EPetsData");
-//                optionsBuilder.UseSqlServer("Data source =DESKTOP-8UF80R8; Initial Catalog = EPetsData");
+                optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = EpetsData");
             }
         }
     }
