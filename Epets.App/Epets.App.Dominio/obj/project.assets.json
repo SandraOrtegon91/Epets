@@ -276,7 +276,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "System.ComponentModel.Annotations >= *"
+      "System.ComponentModel.Annotations >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -322,7 +322,7 @@
           },
           "System.ComponentModel.Annotations": {
             "target": "Package",
-            "version": "[*, )"
+            "version": "[5.0.0, )"
           }
         },
         "imports": [
