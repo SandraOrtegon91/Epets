@@ -14,9 +14,9 @@ namespace Epets.App.Dominio.Entidades
     public class Medico : Persona
     {
 
-        [Column("Id")]
+        [Column("IdMedico")]
         [Key]
-        public int IdMedico{get;set;}
+        public int IdMedico {get;set;}
  
       
         [Required]

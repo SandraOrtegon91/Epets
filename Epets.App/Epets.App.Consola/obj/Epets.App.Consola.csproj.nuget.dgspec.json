@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {}
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
         "projectName": "Epets.App.Consola",
-        "projectPath": "C:\\MF\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
-        "packagesPath": "C:\\Users\\elkin\\.nuget\\packages\\",
-        "outputPath": "C:\\MF\\Epets.App\\Epets.App.Consola\\obj\\",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -25,19 +25,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               },
-              "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
-                "projectPath": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
-=======
-              "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
-              },
-              "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
-                "projectPath": "C:\\Users\\gerfa\\Downloads\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
->>>>>>> 6b888e9a381ca3ce051ea91e26f7b3ca847bed2a
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
               }
             }
           }
@@ -73,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
         "projectName": "Epets.App.Dominio",
-        "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\elkin\\.nuget\\packages\\",
-        "outputPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\obj\\",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -114,6 +106,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -126,21 +122,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
         "projectName": "Epets.App.Persistencia",
-        "projectPath": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\elkin\\.nuget\\packages\\",
-        "outputPath": "C:\\MF\\Epets.App\\Epets.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elkin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -151,8 +147,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\MF\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               }
             }
           }
@@ -202,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     }
