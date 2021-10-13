@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oRaxguDIXkB2HmJtEpBVoAzqwMXy5OOJ/6C1sKKnYt47OBfxOops8qUK6S2qZyKN+9gnypOBSpl2NFf9YkhFhA==",
+  "dgSpecHash": "B2DdKiFWjdxOajof5DV9kcOdaba5EznZPE9OZ4JCHRGOtzSziAWC/6VzgN1n/K9r1wLqYU5WTXDXab6m8RfDyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+  "projectFilePath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerfa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gerfa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

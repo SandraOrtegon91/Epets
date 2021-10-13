@@ -11,6 +11,7 @@ namespace Epets.App.Dominio.Entidades
 
     [Table("EmpresaDb")]
     public class Empresa
+    
     {
         [Column("Id")]
         [Key]

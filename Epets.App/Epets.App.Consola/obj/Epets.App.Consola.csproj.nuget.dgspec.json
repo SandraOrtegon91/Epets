@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {}
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
         "projectName": "Epets.App.Consola",
-        "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\Epets.App.Consola.csproj",
         "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Consola\\obj\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,11 +25,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               },
-              "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
-                "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
         "projectName": "Epets.App.Dominio",
-        "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\obj\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -126,14 +126,14 @@
         }
       }
     },
-    "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+    "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
         "projectName": "Epets.App.Persistencia",
-        "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\obj\\",
+        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -147,8 +147,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               }
             }
           }
