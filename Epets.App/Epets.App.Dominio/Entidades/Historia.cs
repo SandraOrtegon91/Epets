@@ -17,20 +17,21 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de la Historia
         public int IdHistoria { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("DateTime")]
         [StringLength(12,MinimumLength=6)]
         public DateTime FechaVisita{get;set;} //DateTime
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Recomendaciones")]
         [StringLength(50,MinimumLength=5)]
         public string Recomendaciones{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Medicamento")]
         [StringLength(20,MinimumLength=5)]
         public string Medicamento{get;set;}
+        
         
         [ForeignKey("SignoVital")]
         public SignoVital Signos{get;set;}

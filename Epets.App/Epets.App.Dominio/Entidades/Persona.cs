@@ -17,25 +17,25 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de cada Persona
         public int Id{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Cedula")]
         [StringLength(10,MinimumLength=5)]
         //Cedula de la persona
         public string Cedula{get; set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Nombre")]
         [StringLength(10,MinimumLength=5)]
         //Nombre de la Persona
         public string Nombre{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Apellido")]
         [StringLength(10,MinimumLength=5)]
         //Apellido de la Mascota
         public string Apellido{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Telefono")]
         [StringLength(10,MinimumLength=5)]
         //Telefono de la Persona

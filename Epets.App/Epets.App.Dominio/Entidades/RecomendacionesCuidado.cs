@@ -16,7 +16,7 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de cada SugerenciaCuidado
         public int Id { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Fecha")]
         [StringLength(12,MinimumLength=5)]
         // Fecha y hora en que se escribe la sugerencia

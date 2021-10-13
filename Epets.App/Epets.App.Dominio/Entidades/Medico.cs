@@ -15,14 +15,18 @@ namespace Epets.App.Dominio.Entidades
     {
 
         [Column("IdMedico")]
-        [Key]
-        public int IdMedico {get;set;}
+        [Required(ErrorMessage = "Este dato es requerido")]
+        public int MedicoID {get;set;}
  
       
-        [Required]
+       
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("TarjetaProfesional")]
+        [StringLength(20,MinimumLength=5)]
         //Identificador unico de cada profesional
         public int TarjetaProfesional{get;set;}
+
+      
         
         [ForeignKey("EspecialidadMascota")]      
         //Relacion entre la especialidad medica y el Médico  

@@ -13,12 +13,11 @@ namespace Epets.App.Dominio.Entidades
     [Table("PropietariosDb")]
     public class Propietario : Persona
     {
-        [Column("Id")]
-        [Key]
+        [Column("IdPropietario")]
         //Datos del Propietario de la mascota
         public int IdPropietario{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Direccion")]
         [StringLength(50,MinimumLength=5)]
         //Direccion del Propietario

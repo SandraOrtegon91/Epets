@@ -9,8 +9,13 @@ namespace Epets.App.Presentacion.Pages
 {
     public class InicioMedicoModel : PageModel
     {
+
+        public List<string>Medicos{get; set;}
+
         public void OnGet()
         {
+            
+
             
         }
     }

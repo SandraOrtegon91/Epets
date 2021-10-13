@@ -17,13 +17,13 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de cada Mascota
         public int IdMascota{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("NombreMascota")]
         [StringLength(10,MinimumLength=5)]
         //Nombre de La Mascota
         public string NombreMascota{get;set;}
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("ColorOjos")]
         [StringLength(10,MinimumLength=5)]
         //Color de Ojos de la Mascota
@@ -62,6 +62,7 @@ namespace Epets.App.Dominio.Entidades
         
         [ForeignKey("Historia")]
         // Relacion entre Mascota y su Historia clínica
+        
         public Historia Historia{get;set;}
     }
 }

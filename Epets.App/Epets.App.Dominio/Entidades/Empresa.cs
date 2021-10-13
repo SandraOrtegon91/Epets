@@ -16,18 +16,18 @@ namespace Epets.App.Dominio.Entidades
         //Identificador único de la Empresa
         public int Id{ get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Nombre")]
         [StringLength(50,MinimumLength=5)]
         //Nombre de la empresa
         public string Nombre { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Nit")]
         //Nit de la empresa
         public int Nit { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Direccion")]
         [StringLength(50,MinimumLength=5)]
         //Direccion de la empresa
