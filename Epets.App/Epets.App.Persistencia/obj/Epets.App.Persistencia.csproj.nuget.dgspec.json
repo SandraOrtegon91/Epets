@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {}
+    "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+    "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
         "projectName": "Epets.App.Dominio",
-        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -35,6 +36,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -57,21 +59,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
+    "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
         "projectName": "Epets.App.Persistencia",
-        "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
-        "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -81,9 +83,10 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-                "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+              "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
               }
             }
           }
@@ -96,6 +99,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -133,7 +137,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

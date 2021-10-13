@@ -16,7 +16,7 @@ namespace Epets.App.Dominio.Entidades
 
         [Column("IdMedico")]
         [Required(ErrorMessage = "Este dato es requerido")]
-        public int MedicoID {get;set;}
+        public int IdMedico {get;set;}
  
       
        
@@ -28,8 +28,8 @@ namespace Epets.App.Dominio.Entidades
 
       
         
-        [ForeignKey("EspecialidadMascota")]      
+        [ForeignKey("IdAnimal")]      
         //Relacion entre la especialidad medica y el Médico  
-        public string EspecialidadMascota{get;set;}
+        public virtual TipoAnimal TipoAnimal { get; set; }
     }
 }

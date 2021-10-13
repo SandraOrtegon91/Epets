@@ -16,7 +16,7 @@ namespace Epets.App.Dominio.Entidades
         [Column("Id")]
         [Key]
         // Identificador único de cada signo vital
-        public int Id{ get; set; }
+        public int IdSigno{ get; set; }
         
         [Required]
         [Column("Fecha")]
@@ -24,12 +24,13 @@ namespace Epets.App.Dominio.Entidades
         /// Fecha y hora en que se realizó la toma del signo vital 
         public DateTime FechaHora  { get; set; }
         
-        [ForeignKey("EspecialidadMascota")]
+        [ForeignKey("IdAnimal")]
         /// Valor numérico del signo vital  
-        public float Valor_signo {get;set;}
+        //public float Valor_signo {get;set;}
+        public virtual TipoAnimal TipoAnimal { get; set; }
         
-        [ForeignKey("EspecialidadMascota")]
+        [ForeignKey("IdSigno")]
         /// Tipo de Signo vital medido
-        public TipoSigno Signo { get; set; }
+        public virtual TipoSigno TipoSigno { get; set; }
     }
 }

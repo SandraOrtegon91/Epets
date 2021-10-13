@@ -43,3 +43,13 @@ C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App
 C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.dll
 C:\Epets.App-main\Epets.App\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.deps.json
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.dll
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\bin\Debug\netstandard2.0\Epets.App.Dominio.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.AssemblyInfo.cs
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.dll
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Dominio\obj\Debug\netstandard2.0\Epets.App.Dominio.pdb

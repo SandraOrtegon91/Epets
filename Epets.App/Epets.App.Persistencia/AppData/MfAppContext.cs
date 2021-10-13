@@ -23,7 +23,11 @@ namespace Epets.App.Persistencia.AppData
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = EpetsData");
+                //CADENA DE CONEXION SEGUN SUS PC
+                //optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = EpetsData");
+
+                //CADENA DE CONEXION CON MI PC(JUAN)
+                optionsBuilder.UseSqlServer("Data source = DESKTOP-K4BS64T; Initial Catalog = EpetsData1;User ID=SoporteJP;Password=juan;");
             }
         }
     }

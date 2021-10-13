@@ -67,7 +67,7 @@ namespace Epets.App.Persistencia.AppRepositorios
             if (medicoEncontrado!=null)
                 {
                     medicoEncontrado.TarjetaProfesional=medico.TarjetaProfesional;
-                    medicoEncontrado.EspecialidadMascota=medico.EspecialidadMascota;
+                    medicoEncontrado.TipoAnimal=medico.TipoAnimal;
 
                     _appContext.SaveChanges();
                    

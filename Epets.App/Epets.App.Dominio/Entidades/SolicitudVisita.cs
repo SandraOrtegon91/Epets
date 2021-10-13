@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Epets.App.Dominio.Entidades
 {
@@ -16,26 +18,27 @@ namespace Epets.App.Dominio.Entidades
         [Key]
         public int Id { get; set; }
         
-        [ForeignKey("Mascota")]
+        [ForeignKey("IdMascota")]
         // Identificacion de la mascota
-        public Mascota Mascota{get;set;}
+        public virtual Mascota Mascota { get; set; }
         
-        [ForeignKey("FechaVisita")]
+        [Column("FechaVisita")]
         /// Fecha y hora en que se agenda la visita       
-        public DateTime FechaVisita{get;set;}
+        public DateTime FechaVisita{ get; set; }
         
-        [ForeignKey("Propietario")]
+        [ForeignKey("IdPropietario")]
         /// Relacion entre el propietario y la solicitud de Visita
-        public Propietario Propietario{get;set;}
+        public virtual Propietario Propietario { get; set; }
         
-        [ForeignKey("NombreMascota")]
+        [Required]
+        [Column("NombreMascota")]
+        [StringLength(10,MinimumLength=5)]
         /// Relacion entre la Mascota y la solicitud de Visita
-        public Mascota NombreMascota{get;set;}
+        public string NombreMascota{get;set;}
         
-/*        [ForeignKey("TipoAnimal")]
+        [ForeignKey("IdAnimal")]
         /// Relacion entre el Tipo de Animal y la solicitud de Visita
-        public TipoAnimal TipoAnimal{get;set;}*/
-        
+        public virtual TipoAnimal TipoAnimal { get; set; }
 /*        [ForeignKey("Especialidad")]
         /// Relacion entre la Especialidad del Medico y la solicitud de Visita
         public Especialidad Especialidad{get;set;}*/

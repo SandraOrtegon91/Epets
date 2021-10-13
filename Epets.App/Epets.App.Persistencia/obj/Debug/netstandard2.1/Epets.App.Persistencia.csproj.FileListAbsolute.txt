@@ -58,3 +58,16 @@ C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epet
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.AssemblyReference.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfo.cs
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.deps.json
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.dll
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.pdb
+C:\Users\Windows\Documents\MascostasFelicesCode\Epets.app\Epets.app.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete

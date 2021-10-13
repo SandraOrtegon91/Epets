@@ -52,17 +52,17 @@ namespace Epets.App.Dominio.Entidades
         //Tipo de la mascota
         public string TipoMascota{get;set;}
 
-        [ForeignKey("Propietario")]
+        [ForeignKey("IdPropietario")]
         // Relacion entre el propietario y la Mascota
-        public Propietario Propietario{get;set;}
+        public virtual Propietario Propietario{ get; set; }
         
-        [ForeignKey("Medico")]
+        [ForeignKey("IdMedico")]
         // Relacion entre el Medico y la Mascota
-        public Medico Medico{get;set;}
+        public virtual Medico Medico{ get; set; }
         
-        [ForeignKey("Historia")]
+        [ForeignKey("IdHistoria")]
         // Relacion entre Mascota y su Historia clínica
         
-        public Historia Historia{get;set;}
+        public virtual Historia Historia{ get; set; }
     }
 }

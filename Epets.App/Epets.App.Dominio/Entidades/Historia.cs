@@ -17,31 +17,34 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de la Historia
         public int IdHistoria { get; set; }
         
-        [Required(ErrorMessage = "Este dato es requerido")]
+        [Required]
         [Column("DateTime")]
         [StringLength(12,MinimumLength=6)]
         public DateTime FechaVisita{get;set;} //DateTime
         
-        [Required(ErrorMessage = "Este dato es requerido")]
+        [Required]
         [Column("Recomendaciones")]
         [StringLength(50,MinimumLength=5)]
         public string Recomendaciones{get;set;}
         
-        [Required(ErrorMessage = "Este dato es requerido")]
+        [Required]
         [Column("Medicamento")]
         [StringLength(20,MinimumLength=5)]
         public string Medicamento{get;set;}
         
         
-        [ForeignKey("SignoVital")]
-        public SignoVital Signos{get;set;}
+        /*[ForeignKey("IdSigno")]
+        public virtual SignoVital SignoVital { get; set; }*/
         
-        [ForeignKey("SignoVital")]
+        [ForeignKey("IdSigno")]
         //Referencia a la lista de signos vitales de una mascota
-        public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
+        //public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
+        public virtual SignoVital SignoVital { get; set; }
 
-        [ForeignKey("RecomendacionesCuidado")]
+        
+        [ForeignKey("IdRecomendacion")]
         // Referencia la lista de sugerencias registradas en la Historia del Paciente
-        public List<RecomendacionesCuidado> RecomendacionesCuidados { get; set; }
+        //public List<RecomendacionesCuidado> RecomendacionesCuidados { get; set; }
+        public virtual RecomendacionesCuidado RecomendacionesCuidado { get; set; }
     }
 }

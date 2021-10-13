@@ -23,12 +23,14 @@ namespace Epets.App.Dominio.Entidades
         //Direccion del Propietario
         public string Direccion{get;set;}
         
-        [ForeignKey("SolicitudVisita")]
+        [ForeignKey("IdSolicitud")]
         //Referencia a la lista de Solicitud de visita  
-        public System.Collections.Generic.List<SolicitudVisita> SolicitudVisita{get;set;}
+        // public System.Collections.Generic.List<SolicitudVisita> SolicitudVisita{get;set;}
+        public virtual SolicitudVisita SolicitudVisita { get; set; }
         
-        [ForeignKey("Mascotas")]
+        [ForeignKey("IdMascota")]
         //Referencia a la lista de Mascotas que puede tener un propietario  
-        public System.Collections.Generic.List<Mascota> MascotasPropietario { get; set; }
+        //public System.Collections.Generic.List<Mascota> MascotasPropietario { get; set; }
+        public virtual Mascota Mascota { get; set; }
     }
 }

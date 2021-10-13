@@ -14,7 +14,7 @@ namespace Epets.App.Dominio.Entidades
         [Column("Id")]
         [Key]
         // Identificador único de cada SugerenciaCuidado
-        public int Id { get; set; }
+        public int IdRecomendacion { get; set; }
         
         [Required(ErrorMessage = "Este dato es requerido")]
         [Column("Fecha")]
@@ -22,7 +22,9 @@ namespace Epets.App.Dominio.Entidades
         // Fecha y hora en que se escribe la sugerencia
         public DateTime FechaHora  { get; set; }
         
-        [ForeignKey("Sugerencias")]
+        [Required]
+        [Column("Sugerencias")]
+        [StringLength(12,MinimumLength=5)]
         /// Texto con la sugerencia
         public string Descripcion {get;set;}
         

@@ -1,13 +1,22 @@
 using System;
-namespace Epets.App.Dominio.Entidades
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+namespace Epets.App.Dominio
 {
-      /// <summary>
-    /// Lista de Tipos de Animales
-    /// </summary>
-    public enum TipoAnimal
+    [Table("TipoAnimalDb")]
+    public class TipoAnimal
     {
-        Perros,
-        Gatos,
-        Pajaros
+        [Key]
+        [Column("Id")]
+        public int IdAnimal { get; set; }
+
+
+        [Column("Nombre")]
+        [Required]
+        [StringLength(50,MinimumLength=5)]
+        public string Nombre { get; set; }
+
     }
 }

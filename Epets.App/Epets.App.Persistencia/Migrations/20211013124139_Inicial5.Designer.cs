@@ -4,14 +4,16 @@ using Epets.App.Persistencia.AppData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Epets.App.Persistencia.Migrations
 {
     [DbContext(typeof(MfAppContext))]
-    partial class MfAppContextModelSnapshot : ModelSnapshot
+    [Migration("20211013124139_Inicial5")]
+    partial class Inicial5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace Epets.App.Persistencia.Migrations
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Empresa", b =>
                 {
-                    b.Property<int>("IdEmpresa")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("Id")
@@ -46,7 +48,7 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("Nombre");
 
-                    b.HasKey("IdEmpresa");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdMedico");
 
@@ -120,10 +122,10 @@ namespace Epets.App.Persistencia.Migrations
                     b.Property<int?>("IdHistoria")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdMedico")
+                    b.Property<int?>("IdPropietario")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdPropietario")
+                    b.Property<int?>("MedicoID")
                         .HasColumnType("int");
 
                     b.Property<string>("NombreMascota")
@@ -148,9 +150,9 @@ namespace Epets.App.Persistencia.Migrations
 
                     b.HasIndex("IdHistoria");
 
-                    b.HasIndex("IdMedico");
-
                     b.HasIndex("IdPropietario");
+
+                    b.HasIndex("MedicoID");
 
                     b.ToTable("MascotaDb");
                 });
@@ -336,7 +338,7 @@ namespace Epets.App.Persistencia.Migrations
                     b.Property<int?>("IdAnimal")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdMedico")
+                    b.Property<int>("MedicoID")
                         .HasColumnType("int")
                         .HasColumnName("IdMedico");
 
@@ -407,13 +409,13 @@ namespace Epets.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("IdHistoria");
 
-                    b.HasOne("Epets.App.Dominio.Entidades.Medico", "Medico")
-                        .WithMany()
-                        .HasForeignKey("IdMedico");
-
                     b.HasOne("Epets.App.Dominio.Entidades.Propietario", "Propietario")
                         .WithMany()
                         .HasForeignKey("IdPropietario");
+
+                    b.HasOne("Epets.App.Dominio.Entidades.Medico", "Medico")
+                        .WithMany()
+                        .HasForeignKey("MedicoID");
 
                     b.Navigation("Historia");
 
