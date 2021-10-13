@@ -65,7 +65,7 @@ namespace Epets.App.Persistencia.AppRepositorios
                     historiaEncontrada.FechaVisita=historia.FechaVisita;
                     historiaEncontrada.Recomendaciones=historia.Recomendaciones;
                     historiaEncontrada.Medicamento=historia.Medicamento;
-                    historiaEncontrada.SignoVital=historia.SignoVital;
+                    historiaEncontrada.Signos=historia.Signos;
                     _appContext.SaveChanges(); 
                 }            
             return historiaEncontrada;

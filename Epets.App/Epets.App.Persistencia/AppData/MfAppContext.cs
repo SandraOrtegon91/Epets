@@ -26,11 +26,9 @@ namespace Epets.App.Persistencia.AppData
                 //CADENA DE CONEXION SEGUN SUS PC
                 //optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = EpetsData");
 
-                //CADENA DE CONEXION CON MI PC(JUAN)
-             // optionsBuilder.UseSqlServer("Data source = DESKTOP-K4BS64T; Initial Catalog = EpetsData1;User ID=SoporteJP;Password=juan;");
-               // optionsBuilder.UseSqlServer("Data source = (localdb)\\MSSQLLocalDB; Initial Catalog = EpetsData_ok");
-               optionsBuilder.UseSqlServer("Data source = DESKTOP-ED7AP1K; Initial Catalog = EpetsData2; Integrated Security = True");
-               //Data Source=localhost;Initial Catalog=EpetsData2;
+                //CADENA DE CONEXION CON MI PC
+                //optionsBuilder.UseSqlServer("Data source = DESKTOP-K4BS64T; Initial Catalog = EpetsData;User ID=SoporteJP;Password=juan;");
+           optionsBuilder.UseSqlServer("Data source = DESKTOP-ED7AP1K; Initial Catalog = EpetsData2; Integrated Security = True");
             }
         }
     }

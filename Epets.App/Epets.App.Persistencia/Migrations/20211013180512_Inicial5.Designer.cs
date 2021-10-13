@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Epets.App.Persistencia.Migrations
 {
     [DbContext(typeof(MfAppContext))]
-    [Migration("20211013131717_Inicial7")]
-    partial class Inicial7
+    [Migration("20211013180512_Inicial5")]
+    partial class Inicial5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace Epets.App.Persistencia.Migrations
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Empresa", b =>
                 {
-                    b.Property<int>("IdEmpresa")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("Id")
@@ -48,7 +48,7 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("Nombre");
 
-                    b.HasKey("IdEmpresa");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdMedico");
 
@@ -68,12 +68,6 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DateTime");
 
-                    b.Property<int?>("IdRecomendacion")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdSigno")
-                        .HasColumnType("int");
-
                     b.Property<string>("Medicamento")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -86,11 +80,12 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("Recomendaciones");
 
+                    b.Property<int?>("SignoVital")
+                        .HasColumnType("int");
+
                     b.HasKey("IdHistoria");
 
-                    b.HasIndex("IdRecomendacion");
-
-                    b.HasIndex("IdSigno");
+                    b.HasIndex("SignoVital");
 
                     b.ToTable("Historia");
                 });
@@ -196,33 +191,34 @@ namespace Epets.App.Persistencia.Migrations
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.RecomendacionesCuidado", b =>
                 {
-                    b.Property<int>("IdRecomendacion")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("Id")
                         .UseIdentityColumn();
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)")
-                        .HasColumnName("Sugerencias");
 
                     b.Property<DateTime>("FechaHora")
                         .HasMaxLength(12)
                         .HasColumnType("datetime2")
                         .HasColumnName("Fecha");
 
-                    b.HasKey("IdRecomendacion");
+                    b.Property<int?>("RecomendacionesCuidado")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecomendacionesCuidado");
 
                     b.ToTable("RecomendacionesDb");
                 });
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.SignoVital", b =>
                 {
-                    b.Property<int>("IdSigno")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id");
+                        .HasColumnName("Id")
+                        .UseIdentityColumn();
 
                     b.Property<DateTime>("FechaHora")
                         .HasMaxLength(12)
@@ -232,9 +228,19 @@ namespace Epets.App.Persistencia.Migrations
                     b.Property<int?>("IdAnimal")
                         .HasColumnType("int");
 
-                    b.HasKey("IdSigno");
+                    b.Property<int?>("IdSigno")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SignoVital")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("IdAnimal");
+
+                    b.HasIndex("IdSigno");
+
+                    b.HasIndex("SignoVital");
 
                     b.ToTable("SignoVitalDb");
                 });
@@ -340,10 +346,9 @@ namespace Epets.App.Persistencia.Migrations
 
                     b.Property<int>("IdMedico")
                         .HasColumnType("int")
-                        .HasColumnName("IdMedico");
+                        .HasColumnName("Id");
 
                     b.Property<int>("TarjetaProfesional")
-                        .HasMaxLength(20)
                         .HasColumnType("int")
                         .HasColumnName("TarjetaProfesional");
 
@@ -367,14 +372,9 @@ namespace Epets.App.Persistencia.Migrations
 
                     b.Property<int>("IdPropietario")
                         .HasColumnType("int")
-                        .HasColumnName("IdPropietario");
-
-                    b.Property<int?>("IdSolicitud")
-                        .HasColumnType("int");
+                        .HasColumnName("Id");
 
                     b.HasIndex("IdMascota");
-
-                    b.HasIndex("IdSolicitud");
 
                     b.ToTable("PropietariosDb");
                 });
@@ -390,17 +390,11 @@ namespace Epets.App.Persistencia.Migrations
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Historia", b =>
                 {
-                    b.HasOne("Epets.App.Dominio.Entidades.RecomendacionesCuidado", "RecomendacionesCuidado")
+                    b.HasOne("Epets.App.Dominio.Entidades.SignoVital", "Signos")
                         .WithMany()
-                        .HasForeignKey("IdRecomendacion");
+                        .HasForeignKey("SignoVital");
 
-                    b.HasOne("Epets.App.Dominio.Entidades.SignoVital", "SignoVital")
-                        .WithMany()
-                        .HasForeignKey("IdSigno");
-
-                    b.Navigation("RecomendacionesCuidado");
-
-                    b.Navigation("SignoVital");
+                    b.Navigation("Signos");
                 });
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Mascota", b =>
@@ -424,6 +418,13 @@ namespace Epets.App.Persistencia.Migrations
                     b.Navigation("Propietario");
                 });
 
+            modelBuilder.Entity("Epets.App.Dominio.Entidades.RecomendacionesCuidado", b =>
+                {
+                    b.HasOne("Epets.App.Dominio.Entidades.Historia", null)
+                        .WithMany("RecomendacionesCuidados")
+                        .HasForeignKey("RecomendacionesCuidado");
+                });
+
             modelBuilder.Entity("Epets.App.Dominio.Entidades.SignoVital", b =>
                 {
                     b.HasOne("Epets.App.Dominio.TipoAnimal", "TipoAnimal")
@@ -432,9 +433,11 @@ namespace Epets.App.Persistencia.Migrations
 
                     b.HasOne("Epets.App.Dominio.Entidades.TipoSigno", "TipoSigno")
                         .WithMany()
-                        .HasForeignKey("IdSigno")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdSigno");
+
+                    b.HasOne("Epets.App.Dominio.Entidades.Historia", null)
+                        .WithMany("SignosVitales")
+                        .HasForeignKey("SignoVital");
 
                     b.Navigation("TipoAnimal");
 
@@ -489,13 +492,14 @@ namespace Epets.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("IdMascota");
 
-                    b.HasOne("Epets.App.Dominio.Entidades.SolicitudVisita", "SolicitudVisita")
-                        .WithMany()
-                        .HasForeignKey("IdSolicitud");
-
                     b.Navigation("Mascota");
+                });
 
-                    b.Navigation("SolicitudVisita");
+            modelBuilder.Entity("Epets.App.Dominio.Entidades.Historia", b =>
+                {
+                    b.Navigation("RecomendacionesCuidados");
+
+                    b.Navigation("SignosVitales");
                 });
 #pragma warning restore 612, 618
         }

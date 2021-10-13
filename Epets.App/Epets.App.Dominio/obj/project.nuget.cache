@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sWSRF+xFKvqcYRSRsGm2sJ6FST5q+mFGlkQ5O/Jfih5qFjlyXVzdxazb4v3oEJRRiLSapoUpXssDFNxoEPbUwA==",
+  "dgSpecHash": "Up6dLAg3nhTAViqffBmLbpalRo7boiV8FVarJCpp6dcAj3mAsQk/I+0Z7uAVtkxZCjD2lmEVQPUxaSo24BZRrg==",
   "success": true,
-  "projectFilePath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerfa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\gerfa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

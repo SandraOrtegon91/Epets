@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ufjItZGiVkLEH4nQLEF6JQ3J6U/acbki5+l5noO+/uvF69EMEGQjwn9vkmt4j0CvMJoJqXitWdATd7iHAONY6g==",
+  "dgSpecHash": "fwZ36u1anhfVXzu66ZtkNVt1Adq6Kcage2Yvxfuihof0GdwqfKGh8Rpg3F+NK2cbi6xSR6Z9/krneq/dtugSMA==",
   "success": true,
-  "projectFilePath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+  "projectFilePath": "C:\\Users\\gerfa\\Downloads\\MascostasFelicesCode-master\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gerfa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gerfa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

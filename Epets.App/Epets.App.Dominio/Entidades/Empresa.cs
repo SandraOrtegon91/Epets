@@ -15,7 +15,7 @@ namespace Epets.App.Dominio.Entidades
         [Column("Id")]
         [Key]
         //Identificador único de la Empresa
-        public int IdEmpresa{ get; set; }
+        public int Id{ get; set; }
         
         [Required]
         [Column("Nombre")]

@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Epets.App.Dominio.Entidades
 {
@@ -17,13 +19,13 @@ namespace Epets.App.Dominio.Entidades
         // Identificador único de cada Mascota
         public int IdMascota{get;set;}
         
-        [Required(ErrorMessage = "Este dato es requerido")]
+        [Required]
         [Column("NombreMascota")]
         [StringLength(10,MinimumLength=5)]
         //Nombre de La Mascota
         public string NombreMascota{get;set;}
         
-        [Required(ErrorMessage = "Este dato es requerido")]
+        [Required]
         [Column("ColorOjos")]
         [StringLength(10,MinimumLength=5)]
         //Color de Ojos de la Mascota
@@ -54,15 +56,13 @@ namespace Epets.App.Dominio.Entidades
 
         [ForeignKey("IdPropietario")]
         // Relacion entre el propietario y la Mascota
-        public virtual Propietario Propietario{ get; set; }
+        public virtual Propietario Propietario { get; set; }
         
         [ForeignKey("IdMedico")]
         // Relacion entre el Medico y la Mascota
-        public virtual Medico Medico{ get; set; }
-        
+        public virtual Medico Medico { get; set; }        
         [ForeignKey("IdHistoria")]
         // Relacion entre Mascota y su Historia clínica
-        
-        public virtual Historia Historia{ get; set; }
+        public virtual Historia Historia { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Epets.App.Persistencia.Migrations
 {
-    public partial class Inicial5 : Migration
+    public partial class Inicial4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -54,10 +54,6 @@ namespace Epets.App.Persistencia.Migrations
                 name: "PK_RecomendacionesCuidado",
                 table: "RecomendacionesCuidado");
 
-            migrationBuilder.DropIndex(
-                name: "IX_RecomendacionesCuidado_HistoriaId",
-                table: "RecomendacionesCuidado");
-
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Personas",
                 table: "Personas");
@@ -91,7 +87,7 @@ namespace Epets.App.Persistencia.Migrations
                 table: "SignoVital");
 
             migrationBuilder.DropColumn(
-                name: "HistoriaId",
+                name: "Descripcion",
                 table: "RecomendacionesCuidado");
 
             migrationBuilder.DropColumn(
@@ -185,12 +181,12 @@ namespace Epets.App.Persistencia.Migrations
             migrationBuilder.RenameColumn(
                 name: "HistoriaId",
                 table: "SignoVitalDb",
-                newName: "IdAnimal");
+                newName: "SignoVital");
 
             migrationBuilder.RenameIndex(
                 name: "IX_SignoVital_HistoriaId",
                 table: "SignoVitalDb",
-                newName: "IX_SignoVitalDb_IdAnimal");
+                newName: "IX_SignoVitalDb_SignoVital");
 
             migrationBuilder.RenameColumn(
                 name: "FechaHora",
@@ -198,19 +194,24 @@ namespace Epets.App.Persistencia.Migrations
                 newName: "Fecha");
 
             migrationBuilder.RenameColumn(
-                name: "Descripcion",
+                name: "HistoriaId",
                 table: "RecomendacionesDb",
-                newName: "Sugerencias");
+                newName: "RecomendacionesCuidado");
 
-            migrationBuilder.RenameColumn(
-                name: "MedicoId",
-                table: "MascotaDb",
-                newName: "MedicoID");
+            migrationBuilder.RenameIndex(
+                name: "IX_RecomendacionesCuidado_HistoriaId",
+                table: "RecomendacionesDb",
+                newName: "IX_RecomendacionesDb_RecomendacionesCuidado");
 
             migrationBuilder.RenameColumn(
                 name: "PropietarioId",
                 table: "MascotaDb",
                 newName: "IdPropietario");
+
+            migrationBuilder.RenameColumn(
+                name: "MedicoId",
+                table: "MascotaDb",
+                newName: "IdMedico");
 
             migrationBuilder.RenameColumn(
                 name: "HistoriaId",
@@ -225,7 +226,7 @@ namespace Epets.App.Persistencia.Migrations
             migrationBuilder.RenameIndex(
                 name: "IX_Mascotas_MedicoId",
                 table: "MascotaDb",
-                newName: "IX_MascotaDb_MedicoID");
+                newName: "IX_MascotaDb_IdMedico");
 
             migrationBuilder.RenameIndex(
                 name: "IX_Mascotas_HistoriaId",
@@ -243,18 +244,6 @@ namespace Epets.App.Persistencia.Migrations
                 oldType: "nvarchar(max)",
                 oldNullable: true);
 
-            migrationBuilder.AddColumn<int>(
-                name: "IdRecomendacion",
-                table: "Historia",
-                type: "int",
-                nullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "IdSigno",
-                table: "Historia",
-                type: "int",
-                nullable: true);
-
             migrationBuilder.AddColumn<string>(
                 name: "Recomendaciones",
                 table: "Historia",
@@ -262,6 +251,12 @@ namespace Epets.App.Persistencia.Migrations
                 maxLength: 50,
                 nullable: false,
                 defaultValue: "");
+
+            migrationBuilder.AddColumn<int>(
+                name: "SignoVital",
+                table: "Historia",
+                type: "int",
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "NombreMascota",
@@ -271,25 +266,17 @@ namespace Epets.App.Persistencia.Migrations
                 nullable: false,
                 defaultValue: "");
 
-            migrationBuilder.AlterColumn<int>(
-                name: "Id",
+            migrationBuilder.AddColumn<int>(
+                name: "IdAnimal",
                 table: "SignoVitalDb",
                 type: "int",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "int")
-                .OldAnnotation("SqlServer:Identity", "1, 1");
+                nullable: true);
 
-            migrationBuilder.AlterColumn<string>(
-                name: "Sugerencias",
-                table: "RecomendacionesDb",
-                type: "nvarchar(12)",
-                maxLength: 12,
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
+            migrationBuilder.AddColumn<int>(
+                name: "IdSigno",
+                table: "SignoVitalDb",
+                type: "int",
+                nullable: true);
 
             migrationBuilder.AlterColumn<string>(
                 name: "Telefono",
@@ -450,9 +437,7 @@ namespace Epets.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    IdPropietario = table.Column<int>(type: "int", nullable: false),
                     Direccion = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    IdSolicitud = table.Column<int>(type: "int", nullable: true),
                     IdMascota = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -468,12 +453,6 @@ namespace Epets.App.Persistencia.Migrations
                         name: "FK_PropietariosDb_PersonaDb_Id",
                         column: x => x.Id,
                         principalTable: "PersonaDb",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_PropietariosDb_SolicitudVisitaDb_IdSolicitud",
-                        column: x => x.IdSolicitud,
-                        principalTable: "SolicitudVisitaDb",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -513,8 +492,7 @@ namespace Epets.App.Persistencia.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    IdMedico = table.Column<int>(type: "int", nullable: false),
-                    TarjetaProfesional = table.Column<int>(type: "int", maxLength: 20, nullable: false),
+                    TarjetaProfesional = table.Column<int>(type: "int", nullable: false),
                     IdAnimal = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -535,13 +513,18 @@ namespace Epets.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Historia_IdRecomendacion",
+                name: "IX_Historia_SignoVital",
                 table: "Historia",
-                column: "IdRecomendacion");
+                column: "SignoVital");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Historia_IdSigno",
-                table: "Historia",
+                name: "IX_SignoVitalDb_IdAnimal",
+                table: "SignoVitalDb",
+                column: "IdAnimal");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SignoVitalDb_IdSigno",
+                table: "SignoVitalDb",
                 column: "IdSigno");
 
             migrationBuilder.CreateIndex(
@@ -559,11 +542,6 @@ namespace Epets.App.Persistencia.Migrations
                 table: "PropietariosDb",
                 column: "IdMascota");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_PropietariosDb_IdSolicitud",
-                table: "PropietariosDb",
-                column: "IdSolicitud");
-
             migrationBuilder.AddForeignKey(
                 name: "FK_EmpresaDb_MedicoDb_IdMedico",
                 table: "EmpresaDb",
@@ -573,17 +551,9 @@ namespace Epets.App.Persistencia.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Historia_RecomendacionesDb_IdRecomendacion",
+                name: "FK_Historia_SignoVitalDb_SignoVital",
                 table: "Historia",
-                column: "IdRecomendacion",
-                principalTable: "RecomendacionesDb",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Historia_SignoVitalDb_IdSigno",
-                table: "Historia",
-                column: "IdSigno",
+                column: "SignoVital",
                 principalTable: "SignoVitalDb",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
@@ -597,9 +567,9 @@ namespace Epets.App.Persistencia.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_MascotaDb_MedicoDb_MedicoID",
+                name: "FK_MascotaDb_MedicoDb_IdMedico",
                 table: "MascotaDb",
-                column: "MedicoID",
+                column: "IdMedico",
                 principalTable: "MedicoDb",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
@@ -613,6 +583,22 @@ namespace Epets.App.Persistencia.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
+                name: "FK_RecomendacionesDb_Historia_RecomendacionesCuidado",
+                table: "RecomendacionesDb",
+                column: "RecomendacionesCuidado",
+                principalTable: "Historia",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_SignoVitalDb_Historia_SignoVital",
+                table: "SignoVitalDb",
+                column: "SignoVital",
+                principalTable: "Historia",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
                 name: "FK_SignoVitalDb_TipoAnimalDb_IdAnimal",
                 table: "SignoVitalDb",
                 column: "IdAnimal",
@@ -621,12 +607,12 @@ namespace Epets.App.Persistencia.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_SignoVitalDb_TipoSignoDb_Id",
+                name: "FK_SignoVitalDb_TipoSignoDb_IdSigno",
                 table: "SignoVitalDb",
-                column: "Id",
+                column: "IdSigno",
                 principalTable: "TipoSignoDb",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_SolicitudVisitaDb_MascotaDb_IdMascota",
@@ -660,11 +646,7 @@ namespace Epets.App.Persistencia.Migrations
                 table: "EmpresaDb");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Historia_RecomendacionesDb_IdRecomendacion",
-                table: "Historia");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Historia_SignoVitalDb_IdSigno",
+                name: "FK_Historia_SignoVitalDb_SignoVital",
                 table: "Historia");
 
             migrationBuilder.DropForeignKey(
@@ -672,7 +654,7 @@ namespace Epets.App.Persistencia.Migrations
                 table: "MascotaDb");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_MascotaDb_MedicoDb_MedicoID",
+                name: "FK_MascotaDb_MedicoDb_IdMedico",
                 table: "MascotaDb");
 
             migrationBuilder.DropForeignKey(
@@ -680,11 +662,19 @@ namespace Epets.App.Persistencia.Migrations
                 table: "MascotaDb");
 
             migrationBuilder.DropForeignKey(
+                name: "FK_RecomendacionesDb_Historia_RecomendacionesCuidado",
+                table: "RecomendacionesDb");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_SignoVitalDb_Historia_SignoVital",
+                table: "SignoVitalDb");
+
+            migrationBuilder.DropForeignKey(
                 name: "FK_SignoVitalDb_TipoAnimalDb_IdAnimal",
                 table: "SignoVitalDb");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_SignoVitalDb_TipoSignoDb_Id",
+                name: "FK_SignoVitalDb_TipoSignoDb_IdSigno",
                 table: "SignoVitalDb");
 
             migrationBuilder.DropForeignKey(
@@ -712,11 +702,7 @@ namespace Epets.App.Persistencia.Migrations
                 name: "TipoAnimalDb");
 
             migrationBuilder.DropIndex(
-                name: "IX_Historia_IdRecomendacion",
-                table: "Historia");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Historia_IdSigno",
+                name: "IX_Historia_SignoVital",
                 table: "Historia");
 
             migrationBuilder.DropPrimaryKey(
@@ -725,6 +711,14 @@ namespace Epets.App.Persistencia.Migrations
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_SignoVitalDb",
+                table: "SignoVitalDb");
+
+            migrationBuilder.DropIndex(
+                name: "IX_SignoVitalDb_IdAnimal",
+                table: "SignoVitalDb");
+
+            migrationBuilder.DropIndex(
+                name: "IX_SignoVitalDb_IdSigno",
                 table: "SignoVitalDb");
 
             migrationBuilder.DropPrimaryKey(
@@ -748,20 +742,24 @@ namespace Epets.App.Persistencia.Migrations
                 table: "EmpresaDb");
 
             migrationBuilder.DropColumn(
-                name: "IdRecomendacion",
-                table: "Historia");
-
-            migrationBuilder.DropColumn(
-                name: "IdSigno",
-                table: "Historia");
-
-            migrationBuilder.DropColumn(
                 name: "Recomendaciones",
+                table: "Historia");
+
+            migrationBuilder.DropColumn(
+                name: "SignoVital",
                 table: "Historia");
 
             migrationBuilder.DropColumn(
                 name: "NombreMascota",
                 table: "SolicitudVisitaDb");
+
+            migrationBuilder.DropColumn(
+                name: "IdAnimal",
+                table: "SignoVitalDb");
+
+            migrationBuilder.DropColumn(
+                name: "IdSigno",
+                table: "SignoVitalDb");
 
             migrationBuilder.DropColumn(
                 name: "TipoMascota",
@@ -836,19 +834,14 @@ namespace Epets.App.Persistencia.Migrations
                 newName: "FechaHora");
 
             migrationBuilder.RenameColumn(
-                name: "IdAnimal",
+                name: "SignoVital",
                 table: "SignoVital",
                 newName: "HistoriaId");
 
             migrationBuilder.RenameIndex(
-                name: "IX_SignoVitalDb_IdAnimal",
+                name: "IX_SignoVitalDb_SignoVital",
                 table: "SignoVital",
                 newName: "IX_SignoVital_HistoriaId");
-
-            migrationBuilder.RenameColumn(
-                name: "Sugerencias",
-                table: "RecomendacionesCuidado",
-                newName: "Descripcion");
 
             migrationBuilder.RenameColumn(
                 name: "Fecha",
@@ -856,9 +849,14 @@ namespace Epets.App.Persistencia.Migrations
                 newName: "FechaHora");
 
             migrationBuilder.RenameColumn(
-                name: "MedicoID",
-                table: "Mascotas",
-                newName: "MedicoId");
+                name: "RecomendacionesCuidado",
+                table: "RecomendacionesCuidado",
+                newName: "HistoriaId");
+
+            migrationBuilder.RenameIndex(
+                name: "IX_RecomendacionesDb_RecomendacionesCuidado",
+                table: "RecomendacionesCuidado",
+                newName: "IX_RecomendacionesCuidado_HistoriaId");
 
             migrationBuilder.RenameColumn(
                 name: "IdPropietario",
@@ -866,19 +864,24 @@ namespace Epets.App.Persistencia.Migrations
                 newName: "PropietarioId");
 
             migrationBuilder.RenameColumn(
+                name: "IdMedico",
+                table: "Mascotas",
+                newName: "MedicoId");
+
+            migrationBuilder.RenameColumn(
                 name: "IdHistoria",
                 table: "Mascotas",
                 newName: "HistoriaId");
 
             migrationBuilder.RenameIndex(
-                name: "IX_MascotaDb_MedicoID",
-                table: "Mascotas",
-                newName: "IX_Mascotas_MedicoId");
-
-            migrationBuilder.RenameIndex(
                 name: "IX_MascotaDb_IdPropietario",
                 table: "Mascotas",
                 newName: "IX_Mascotas_PropietarioId");
+
+            migrationBuilder.RenameIndex(
+                name: "IX_MascotaDb_IdMedico",
+                table: "Mascotas",
+                newName: "IX_Mascotas_MedicoId");
 
             migrationBuilder.RenameIndex(
                 name: "IX_MascotaDb_IdHistoria",
@@ -908,15 +911,6 @@ namespace Epets.App.Persistencia.Migrations
                 nullable: false,
                 defaultValue: 0);
 
-            migrationBuilder.AlterColumn<int>(
-                name: "Id",
-                table: "SignoVital",
-                type: "int",
-                nullable: false,
-                oldClrType: typeof(int),
-                oldType: "int")
-                .Annotation("SqlServer:Identity", "1, 1");
-
             migrationBuilder.AddColumn<int>(
                 name: "Signo",
                 table: "SignoVital",
@@ -931,19 +925,10 @@ namespace Epets.App.Persistencia.Migrations
                 nullable: false,
                 defaultValue: 0f);
 
-            migrationBuilder.AlterColumn<string>(
+            migrationBuilder.AddColumn<string>(
                 name: "Descripcion",
                 table: "RecomendacionesCuidado",
                 type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(12)",
-                oldMaxLength: 12);
-
-            migrationBuilder.AddColumn<int>(
-                name: "HistoriaId",
-                table: "RecomendacionesCuidado",
-                type: "int",
                 nullable: true);
 
             migrationBuilder.AlterColumn<string>(
@@ -1103,11 +1088,6 @@ namespace Epets.App.Persistencia.Migrations
                 name: "PK_Empresa",
                 table: "Empresa",
                 column: "Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RecomendacionesCuidado_HistoriaId",
-                table: "RecomendacionesCuidado",
-                column: "HistoriaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_EmpresaId",

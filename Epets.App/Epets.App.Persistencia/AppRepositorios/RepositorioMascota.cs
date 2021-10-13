@@ -71,7 +71,7 @@ namespace Epets.App.Persistencia.AppRepositorios
                     mascotaEncontrada.Raza=mascota.Raza;
                     mascotaEncontrada.Propietario=mascota.Propietario;
                     mascotaEncontrada.Medico=mascota.Medico;
-//                  mascotaEncontrada.TipoAnimal=mascota.TipoAnimal;
+//                    mascotaEncontrada.TipoAnimal=mascota.TipoAnimal;
                     mascotaEncontrada.Historia=mascota.Historia;
                     _appContext.SaveChanges();                   
                 }            

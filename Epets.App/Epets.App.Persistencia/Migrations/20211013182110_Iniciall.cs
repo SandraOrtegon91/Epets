@@ -2,7 +2,7 @@
 
 namespace Epets.App.Persistencia.Migrations
 {
-    public partial class Inicial9 : Migration
+    public partial class Iniciall : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

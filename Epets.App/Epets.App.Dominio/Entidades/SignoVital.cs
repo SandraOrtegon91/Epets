@@ -16,7 +16,7 @@ namespace Epets.App.Dominio.Entidades
         [Column("Id")]
         [Key]
         // Identificador único de cada signo vital
-        public int IdSigno{ get; set; }
+        public int Id{ get; set; }
         
         [Required]
         [Column("Fecha")]

@@ -32,19 +32,15 @@ namespace Epets.App.Dominio.Entidades
         [StringLength(20,MinimumLength=5)]
         public string Medicamento{get;set;}
         
+        [ForeignKey("SignoVital")]
+        public SignoVital Signos{get;set;}
         
-        /*[ForeignKey("IdSigno")]
-        public virtual SignoVital SignoVital { get; set; }*/
-        
-        [ForeignKey("IdSigno")]
+        [ForeignKey("SignoVital")]
         //Referencia a la lista de signos vitales de una mascota
-        //public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
-        public virtual SignoVital SignoVital { get; set; }
+        public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
 
-        
-        [ForeignKey("IdRecomendacion")]
+        [ForeignKey("RecomendacionesCuidado")]
         // Referencia la lista de sugerencias registradas en la Historia del Paciente
-        //public List<RecomendacionesCuidado> RecomendacionesCuidados { get; set; }
-        public virtual RecomendacionesCuidado RecomendacionesCuidado { get; set; }
+        public List<RecomendacionesCuidado> RecomendacionesCuidados { get; set; }
     }
 }
