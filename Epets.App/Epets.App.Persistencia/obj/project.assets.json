@@ -7266,19 +7266,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Windows\\.nuget\\packages\\": {}
+    "C:\\Users\\gerfa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
       "projectName": "Epets.App.Persistencia",
-      "projectPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\Epets.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\gerfa\\.nuget\\packages\\",
+      "outputPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\gerfa\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7288,10 +7288,9 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
+            "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj": {
+              "projectPath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj"
             }
           }
         }
@@ -7304,7 +7303,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7342,7 +7340,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
       }
     }
   }

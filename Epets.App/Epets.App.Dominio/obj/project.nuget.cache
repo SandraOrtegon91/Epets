@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rhPzjObLcIY1+BHN+X3uhVsVe7yTpvG/X04Ou9B8Iq0evVFBKZAMe76pCMJN1FH4JjT+qjMIjsJqfAaZ+631cA==",
+  "dgSpecHash": "sWSRF+xFKvqcYRSRsGm2sJ6FST5q+mFGlkQ5O/Jfih5qFjlyXVzdxazb4v3oEJRRiLSapoUpXssDFNxoEPbUwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Windows\\Documents\\MascostasFelicesCode\\Epets.app\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
+  "projectFilePath": "C:\\Epets.App-main\\Epets.App\\Epets.App.Dominio\\Epets.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Windows\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Windows\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Windows\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\gerfa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gerfa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\gerfa\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
