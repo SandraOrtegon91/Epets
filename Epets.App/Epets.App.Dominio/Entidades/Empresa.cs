@@ -36,8 +36,6 @@ namespace Epets.App.Dominio.Entidades
         //Direccion de la empresa
         public string DireccionEmpresa { get; set; }
 
-        [ForeignKey("IdMedico")]
-        //Relacion a la lista de Medicos con la empresa
-        public virtual System.Collections.Generic.List<Medico> MedicosVinculados{get;set;}
+        
     }
 }

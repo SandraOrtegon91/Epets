@@ -154,7 +154,7 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(10)")
                         .HasColumnName("Cedula");
 
-                    b.Property<int?>("IdMedico")
+                    b.Property<int?>("IdEmpresa")
                         .HasColumnType("int");
 
                     b.Property<int?>("IdTipoAnimal")
@@ -178,7 +178,7 @@ namespace Epets.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdMedico");
+                    b.HasIndex("IdEmpresa");
 
                     b.HasIndex("IdTipoAnimal");
 
@@ -335,13 +335,15 @@ namespace Epets.App.Persistencia.Migrations
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Medico", b =>
                 {
-                    b.HasOne("Epets.App.Dominio.Entidades.Empresa", null)
-                        .WithMany("MedicosVinculados")
-                        .HasForeignKey("IdMedico");
+                    b.HasOne("Epets.App.Dominio.Entidades.Empresa", "Empresa")
+                        .WithMany()
+                        .HasForeignKey("IdEmpresa");
 
                     b.HasOne("Epets.App.Dominio.TipoAnimal", "TipoAnimal")
                         .WithMany()
                         .HasForeignKey("IdTipoAnimal");
+
+                    b.Navigation("Empresa");
 
                     b.Navigation("TipoAnimal");
                 });
@@ -374,11 +376,6 @@ namespace Epets.App.Persistencia.Migrations
                         .HasForeignKey("IdTipoSigno")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Epets.App.Dominio.Entidades.Empresa", b =>
-                {
-                    b.Navigation("MedicosVinculados");
                 });
 
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Historia", b =>

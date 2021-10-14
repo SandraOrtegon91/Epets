@@ -21,5 +21,10 @@ namespace Epets.App.Dominio.Entidades
         [ForeignKey("IdTipoAnimal")]      
         //Identificacion de la especialidad y el Médico  
         public virtual TipoAnimal TipoAnimal { get; set; }
+
+        [ForeignKey("IdEmpresa")]
+        // Relacion entre el propietario y la Mascota
+        public virtual Empresa Empresa { get; set; }
+        
     }
 }

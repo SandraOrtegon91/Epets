@@ -135,7 +135,7 @@ namespace Epets.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TarjetaProfesional = table.Column<int>(type: "int", nullable: false),
                     IdTipoAnimal = table.Column<int>(type: "int", nullable: true),
-                    IdMedico = table.Column<int>(type: "int", nullable: true),
+                    IdEmpresa = table.Column<int>(type: "int", nullable: true),
                     Cedula = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Apellido = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
@@ -145,8 +145,8 @@ namespace Epets.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_MedicoDb", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MedicoDb_EmpresaDb_IdMedico",
-                        column: x => x.IdMedico,
+                        name: "FK_MedicoDb_EmpresaDb_IdEmpresa",
+                        column: x => x.IdEmpresa,
                         principalTable: "EmpresaDb",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -208,9 +208,9 @@ namespace Epets.App.Persistencia.Migrations
                 column: "IdTipoAnimal");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MedicoDb_IdMedico",
+                name: "IX_MedicoDb_IdEmpresa",
                 table: "MedicoDb",
-                column: "IdMedico");
+                column: "IdEmpresa");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MedicoDb_IdTipoAnimal",
