@@ -15,24 +15,23 @@ namespace Epets.App.Dominio.Entidades
     {
         [Key]
         [Column("Id")]
-        public int IdSigno { get; set; }
+        public int IdTipoSigno { get; set; }
 
-
+        [Required]
         [Column("Temperatura")]
         public int Temperatura{ get; set; }
 
-
+        [Required]
         [Column("Peso")]
         public int Peso{ get; set; }
 
-
+        [Required]
         [Column("FrecuenciaCardiaca")]
         public int Freuencia_Cardiaca{ get; set; }
 
-
+        [Required]
         [Column("FrecuenciaRespiratoria")]
         public int Frecuencia_Respiratoria{get;set;}
-
 
         [Required]
         [Column("EstadoAnimo")]

@@ -13,19 +13,13 @@ namespace Epets.App.Dominio.Entidades
     [Table("MedicoDb")]
     public class Medico : Persona
     {
-
-        [Column("Id")]
-        //[Key]
-        public int IdMedico{get;set;}
- 
-      
         [Required]
         [Column("TarjetaProfesional")]
         //Identificador unico de cada profesional
         public int TarjetaProfesional{get;set;}
         
-        [ForeignKey("IdAnimal")]      
-        //Relacion entre la especialidad medica y el Médico  
+        [ForeignKey("IdTipoAnimal")]      
+        //Identificacion de la especialidad y el Médico  
         public virtual TipoAnimal TipoAnimal { get; set; }
     }
 }

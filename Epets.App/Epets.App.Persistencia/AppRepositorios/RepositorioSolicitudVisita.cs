@@ -36,7 +36,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Eliminar una SolicitudVisita 
         void IRepositorioSolicitudVisita.DeleteSolicitudVisita(int IdSolicitudVisita)
         {
-            var solicitudVisitaEncontrada=_appContext.SolicitudVisitas.FirstOrDefault(p => p.Id==IdSolicitudVisita);
+            var solicitudVisitaEncontrada=_appContext.SolicitudVisitas.FirstOrDefault(p => p.IdSolicitudVisita==IdSolicitudVisita);
 
             if (solicitudVisitaEncontrada==null)
                 return ;
@@ -56,7 +56,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         //Implementacion metodo Retornar una SolicitudVisita
         SolicitudVisita IRepositorioSolicitudVisita.GetSolicitudVisita(int IdSolicitudVisita)
         {
-            return _appContext.SolicitudVisitas.FirstOrDefault(p => p.Id==IdSolicitudVisita);
+            return _appContext.SolicitudVisitas.FirstOrDefault(p => p.IdSolicitudVisita==IdSolicitudVisita);
 
         }
 
@@ -64,16 +64,11 @@ namespace Epets.App.Persistencia.AppRepositorios
         SolicitudVisita IRepositorioSolicitudVisita.UpdateSolicitudVisita(SolicitudVisita solicitudVisita)
         {
 
-            var solicitudVisitaEncontrada=_appContext.SolicitudVisitas.FirstOrDefault(p => p.Id==solicitudVisita.Id);
+            var solicitudVisitaEncontrada=_appContext.SolicitudVisitas.FirstOrDefault(p => p.IdSolicitudVisita==solicitudVisita.IdSolicitudVisita);
 
             if (solicitudVisitaEncontrada!=null)
                 {
-                    solicitudVisitaEncontrada.Mascota=solicitudVisita.Mascota;
                     solicitudVisitaEncontrada.FechaVisita=solicitudVisita.FechaVisita;
-                    solicitudVisitaEncontrada.Propietario=solicitudVisita.Propietario;
-                    solicitudVisitaEncontrada.NombreMascota=solicitudVisita.NombreMascota;
-                    //solicitudVisitaEncontrada.TipoAnimal=solicitudVisita.TipoAnimal;
-                    //solicitudVisitaEncontrada.Especialidad=solicitudVisita.Especialidad;
                     _appContext.SaveChanges();        
                 }
             

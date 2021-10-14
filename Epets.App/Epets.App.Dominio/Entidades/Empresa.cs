@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+
 namespace Epets.App.Dominio.Entidades
 {
     /// <summary>Class <c>Empresa</c>
@@ -16,13 +17,13 @@ namespace Epets.App.Dominio.Entidades
         [Column("Id")]
         [Key]
         //Identificador único de la Empresa
-        public int Id{ get; set; }
+        public int IdEmpresa{ get; set; }
         
         [Required]
         [Column("Nombre")]
         [StringLength(50,MinimumLength=5)]
         //Nombre de la empresa
-        public string Nombre { get; set; }
+        public string NombreEmpresa { get; set; }
         
         [Required]
         [Column("Nit")]
@@ -33,11 +34,10 @@ namespace Epets.App.Dominio.Entidades
         [Column("Direccion")]
         [StringLength(50,MinimumLength=5)]
         //Direccion de la empresa
-        public string Direccion { get; set; }
+        public string DireccionEmpresa { get; set; }
 
         [ForeignKey("IdMedico")]
         //Relacion a la lista de Medicos con la empresa
-        //public System.Collections.Generic.List<Medico> MedicosVinculados{get;set;}
-        public virtual Medico Medico { get; set; }
+        public virtual System.Collections.Generic.List<Medico> MedicosVinculados{get;set;}
     }
 }

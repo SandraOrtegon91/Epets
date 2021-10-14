@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Epets.App.Persistencia.AppRepositorios;
 
 namespace Epets.App.Presentacion
 {
@@ -24,6 +25,10 @@ namespace Epets.App.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            //AddSIngleton para une uno a uno la persistencia con la interface
+            //colocamos los repositorios y sus irepositorios, esto lo hacemos con todos, iniciando con la interface y luego el repositorio
+            services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

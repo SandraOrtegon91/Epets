@@ -22,3 +22,15 @@ C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epet
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
 C:\Epets.App-main\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csprojAssemblyReference.cache
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.AssemblyInfo.cs
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.deps.json
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.dll
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Persistencia.pdb
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.dll
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\bin\Debug\netstandard2.1\Epets.App.Dominio.pdb
+C:\Users\elkin\OneDrive\Escritorio\MascostasFelicesCode\Epets.App\Epets.App.Persistencia\obj\Debug\netstandard2.1\Epets.App.Persistencia.csproj.CopyComplete

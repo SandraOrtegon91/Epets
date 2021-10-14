@@ -6,7 +6,7 @@ namespace Epets.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioMascota
     {
-         //firma de los metodos
+        //firma de los metodos
 
         //Metodo para retornar todas las mascotas
         IEnumerable<Mascota> GetAllMascotas();

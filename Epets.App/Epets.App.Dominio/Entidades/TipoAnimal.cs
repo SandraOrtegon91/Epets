@@ -12,11 +12,10 @@ namespace Epets.App.Dominio
         [Column("Id")]
         public int IdAnimal { get; set; }
 
-
-        [Column("Nombre")]
         [Required]
-        [StringLength(50,MinimumLength=5)]
-        public string Nombre { get; set; }
-
+        [Column("T_Animal")]
+        [StringLength(10,MinimumLength=5)]
+        //Referencia la especialidad del tipo de animal
+        public string T_Animal{ get; set; }
     }
 }

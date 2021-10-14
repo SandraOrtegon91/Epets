@@ -16,31 +16,22 @@ namespace Epets.App.Dominio.Entidades
     {
         [Column("Id")]
         [Key]
-        public int Id { get; set; }
-        
-        [ForeignKey("IdMascota")]
-        // Identificacion de la mascota
-        public virtual Mascota Mascota { get; set; }
-        
+        public int IdSolicitudVisita { get; set; }
+
         [Column("FechaVisita")]
         /// Fecha y hora en que se agenda la visita       
         public DateTime FechaVisita{ get; set; }
         
+        [ForeignKey("IdMascota")]
+        // Relacionada con la identificacion de la mascota
+        public virtual Mascota Mascota { get; set; }
+                
         [ForeignKey("IdPropietario")]
-        /// Relacion entre el propietario y la solicitud de Visita
+        // Relacion entre el propietario y la solicitud de Visita
         public virtual Propietario Propietario { get; set; }
         
-        [Required]
-        [Column("NombreMascota")]
-        [StringLength(10,MinimumLength=5)]
-        /// Relacion entre la Mascota y la solicitud de Visita
-        public string NombreMascota{get;set;}
-        
-        [ForeignKey("IdAnimal")]
-        /// Relacion entre el Tipo de Animal y la solicitud de Visita
+        [ForeignKey("IdTipoAnimal")]
+        // Relacion entre el Tipo de Animal y la solicitud de Visita
         public virtual TipoAnimal TipoAnimal { get; set; }
-/*        [ForeignKey("Especialidad")]
-        /// Relacion entre la Especialidad del Medico y la solicitud de Visita
-        public Especialidad Especialidad{get;set;}*/
     }
 }
