@@ -11,6 +11,7 @@ namespace Epets.App.Dominio.Entidades
     /// </summary>   
 
     [Table("PropietariosDb")]
+    
     public class Propietario : Persona
     {
         [Required]
