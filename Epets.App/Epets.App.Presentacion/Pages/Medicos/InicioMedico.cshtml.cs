@@ -8,21 +8,23 @@ using Epets.App.Persistencia.AppRepositorios;
 using Epets.App.Dominio.Entidades;
 
 namespace Epets.App.Presentacion.Pages
-{
-    public class InicioMedicoModel : PageModel
+//Pagina que Muestra la lista de todos los medicos
+{    public class InicioMedicoModel : PageModel
     {
-        private readonly IRepositorioMedico repositorio;
-
+        //Variable de tipo Interface
+        private readonly IRepositorioMedico repositorioMedico;
+        //Variable que contiene la asignacion del metodo brascar medicos
+        public IEnumerable<Epets.App.Dominio.Entidades.Medico> Medicos = new List<Epets.App.Dominio.Entidades.Medico>();
         //METODO DE INICIALIZACION DE LA PAGINA
         public void OnGet()
         {
-            List<medico>=repositorio.GetAllMedicos();
+            Medicos=repositorioMedico.GetAllMedicos().ToList();            
         }
 
-        public InicioMedicoModel(IRepositorioMedico repositorio){
-
-            this.repositorio=repositorio;
-
+        //constructor
+        public InicioMedicoModel(IRepositorioMedico repositorioMedico)
+        {
+            this.repositorioMedico=repositorioMedico;
         }
     }
 }

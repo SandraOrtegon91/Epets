@@ -61,8 +61,6 @@ namespace Epets.App.Dominio.Entidades
         // Relacion entre el Medico y la Mascota
   //      public virtual Medico Medico { get; set; }    
 
-        [ForeignKey("IdHistoria")]
-        // Relacion entre Mascota y su Historia clínica
-        public virtual Historia Historia { get; set; }
+       
     }
 }

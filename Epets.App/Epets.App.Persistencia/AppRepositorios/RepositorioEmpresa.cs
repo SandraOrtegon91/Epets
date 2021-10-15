@@ -8,74 +8,68 @@ namespace Epets.App.Persistencia.AppRepositorios
 {
     public class RepositorioEmpresa : IRepositorioEmpresa
     {
-        /// <summary>
-        /// Referencia al contexto de la Empresa
-        /// </summary>
-        private readonly MfAppContext _appContext;
-
-        /// <summary>Metodo constructor
-        /// que utiliza la inyeccion de dependencias
-        /// para indicar el contexto a utilizar </summary>
-        /// <param name="appContext"></param>
-        ///  
-        public RepositorioEmpresa(MfAppContext appContext)
+         //Implementamos el metodo para IRepositorio
+        public IEnumerable<Empresa> GetAllEmpresas()
         {
-            _appContext=appContext;
+            //Cuerpo del Metodo
+            //conexion
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+                //Consulta Linq
+                var GetAllEmpresas=(from p in Contexto.Empresas select p).ToList();
+                return GetAllEmpresas;
+
+            }
+
+
+        }
+
+        //Implementacion del metodo de esa interfaz
+
+        public  Empresa GetEmpresa(int IdEmpresa){
+            //conexion
+             using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+                 //linq
+                 //var Empresa=(from p in Contexto.empresa where p.IdEmpresa==IdEmpresa select p);
+                 //return Empresa;
+
+                 //sintaxis e-f
+                 return Contexto.Empresas.SingleOrDefault(s=>s.IdEmpresa==IdEmpresa);
+
+             }
         } 
 
-        //implementacion de los metodos de la interfaz
-        //Implementacion metodo Añadir empresa
-        Empresa IRepositorioEmpresa.AddEmpresa(Empresa empresa)
-        {
-            var empresaAdicionada=_appContext.Empresas.Add(empresa);
-            _appContext.SaveChanges();
-            return empresaAdicionada.Entity;
-        }
+        public Empresa AddEmpresa(Empresa empresa){
+           using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
 
-        //Implementacion metodo Eliminar una Empresa 
-        void IRepositorioEmpresa.DeleteEmpresa(int IdEmpresa)
-        {
-            var empresaEncontrada=_appContext.Empresas.FirstOrDefault(p => p.IdEmpresa==IdEmpresa);
-
-            if (empresaEncontrada==null)
-                return ;
-            
-            _appContext.Empresas.Remove(empresaEncontrada);
-            _appContext.SaveChanges();
+               Contexto.Empresas.Add(empresa);
+               Contexto.SaveChanges();
+              
+                   return empresa;              
+           }
 
         }
 
-        //Implementacion metodo retornar todas las Empresas
-        IEnumerable<Empresa> IRepositorioEmpresa.GetAllEmpresas()
-        {
-            return _appContext.Empresas;
+        public Empresa UpdateEmpresa(Empresa empresa){
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
 
+               var ConsultaEmpresa=Contexto.Empresas.SingleOrDefault(s=>s.IdEmpresa==empresa.IdEmpresa);
+
+               if (ConsultaEmpresa!=null){
+                   ConsultaEmpresa.NombreEmpresa=empresa.NombreEmpresa;
+                   ConsultaEmpresa.Nit=empresa.Nit;
+                   ConsultaEmpresa.DireccionEmpresa=empresa.DireccionEmpresa;
+                   Contexto.SaveChanges();
+                                      
+               }
+               return ConsultaEmpresa;
+            }
         }
 
-        //Implementacion metodo Retornar una Empresa
-        Empresa IRepositorioEmpresa.GetEmpresa(int IdEmpresa)
-        {
-            return _appContext.Empresas.FirstOrDefault(p => p.IdEmpresa==IdEmpresa);
-
+        public bool DeleteEmpresa (int IdEmpresa){
+            return true;            
         }
-
-        //Implementacion metodo Actualizar Empresa
-        Empresa IRepositorioEmpresa.UpdateEmpresa(Empresa empresa)
-        {
-
-            var empresaEncontrada=_appContext.Empresas.FirstOrDefault(p => p.IdEmpresa==empresa.IdEmpresa);
-
-            if (empresaEncontrada!=null)
-                {
-                    empresaEncontrada.NombreEmpresa=empresa.NombreEmpresa;
-                    empresaEncontrada.Nit=empresa.Nit;
-                    empresaEncontrada.DireccionEmpresa=empresa.DireccionEmpresa;
-
-                    _appContext.SaveChanges();
-                   
-                }
-            
-            return empresaEncontrada;
-        }
+      //
     }
 }

@@ -15,9 +15,10 @@
         font-size: 1px;
 
     }
-    #BannerVeterinarios{
-        
-        
+
+    #BannerVeterinarios {
+
+
         background-image: url("../img/Banner_Medicos.png");
     }
 
@@ -29,20 +30,23 @@
 
     }
 
-    #btnConsultar:hover{
+    #btnConsultar:hover {
         background-color: #BBBBBB;
     }
 
-     #btnRegistrar:hover{
+    #btnRegistrar:hover {
         background-color: #0DC7E5;
     }
 
-    #btnActualizar:hover{
+    #btnActualizar:hover {
         background-color: #10D691;
     }
 
-    #btnEliminar:hover{
+    #btnEliminar:hover {
         background-color: #FE5D6E;
+    }
+    #btnLimpiar:hover {
+        background-color: #CEECE2;
     }
 
 
@@ -154,16 +158,19 @@
                     <form class="main-form">
                         <div class="row">
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Cedula" style="margin-bottom: 20px;">
+                                <input type="text" class="form-control" placeholder="Digite Cedula"
+                                    style="margin-bottom: 20px;">
                             </div>
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Nombres" style="margin-bottom: 20px;">
+                                <input type="text" class="form-control" placeholder="Digite Nombres"
+                                    style="margin-bottom: 20px;">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
 
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Apellidos" style="margin-bottom: 20px;">
+                                <input type="text" class="form-control" placeholder="Digite Apellidos"
+                                    style="margin-bottom: 20px;">
                             </div>
 
                             <div class="col-md-6 ">
@@ -171,11 +178,12 @@
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
-                             <div class="col-md-6 ">
+                            <div class="col-md-6 ">
                                 <input type="text" class="form-control" placeholder="Digite Telefono">
                             </div>
                             <div class="col-md-6 ">
-                                <select name="Tipo Animal" id="Especialidad" class="custom-select" style="margin-bottom: 20px;">
+                                <select name="Tipo Animal" id="Especialidad" class="custom-select"
+                                    style="margin-bottom: 20px;">
                                     <option value="Elija opcion">--Elija Especialidad--</option>
                                     <option value="Opcion Perro">Perro</option>
                                     <option value="Opcion Gato">Gato</option>
@@ -198,123 +206,60 @@
                                 style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
                             <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
+                            <button id="btnLimpiar" type="submit" class="btn btn-info mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Limpiar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         <div class="col-md-7 col-sm-12">
-            <caption><h4>Listado Medicos</h4></caption>
+            <caption>
+                <h4>Listado Medicos</h4>
+            </caption>
             <table class="table">
-                  
+               
+                    <thead>
+                        <tr class="bg-warning" id="tablaj">
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Cedula</th>
+                            <th scope="col">Nombres </th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">N. Tarjeta Profesiona</th>
+                            <!-- <th scope="col">Especialidad</th>   -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model.Medicos)
+                    {
+                        <tr>
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Cedula
+                            </td>
+                            <td>
+                                @item.Nombre
+                            </td>
+                            <td>
+                                @item.Apellido
+                            </td>
+                            <td>
+                                @item.Telefono
+                            </td>
+                            <td>
+                                @item.TarjetaProfesional
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+
                 
-                <!-- <Mascotas a Cargo</caption>-->
-                <thead>
-                    <tr class="bg-warning" id="tablaj">
-                        <th scope="col">Codigo</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Nombres </th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">N. Tarjeta Profesiona</th>
-                        <th scope="col">Telefono</th>
-                        <th scope="col">Especialidad</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-
-                        <td>1106789789</td>
-                        <td>Samuel</td>
-                        <td>Rodriguez</td>
-                        <td>O2345RGH</td>
-                        <td>3112345432</td>
-                        <td>Perro</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-
-                        <td>1110524169</td>
-                        <td>German</td>
-                        <td>Ospina</td>
-                        <td>234520ULB</td>
-                        <td>3214748012</td>
-                        <td>Gato</td>
-                    </tr>
-                    <tr>
-                         <th scope="row">3</th>
-                        <td>1105682311</td>
-                        <td>Sandra</td>
-                        <td>Ortegon</td>
-                        <td>1789005YUO</td>
-                        <td>3133958228</td>
-                        <td>Perro</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                         <td>1021067801</td>
-                        <td>Jhan</td>
-                        <td>Meneses</td>
-                        <td>567296HYTR</td>
-                        <td>3124567890</td>
-                        <td>Pajaro</td>
-                    </tr>
-                </tbody>
-                
             </table>
-            <caption><h4>Listado de Visitas</h4></caption>
-            <table class="table">
-                <!-- <caption>Listado De visitas</caption>-->
-                <thead>
-                    <tr class="bg-warning" id="tablaj">
-                        <th scope="col">Codigo</th>
-                        <th scope="col">Nombre Mascota</th>
-                        <th scope="col">Tipo Animal</th>
-                        <th scope="col">Fecha y Hora</th>
-                        <th scope="col">Direccion</th>
-                        <th scope="col">Estado Visita</th>
-                    </tr>
-                </thead>
-                <tbody>
 
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Roberto</td>
-                        <td>Pajaro</td>
-                        <td>10-10-2021 10:12 am</td>
-                        <td>manz 9 casa 17 Espinal-Tolima</td>
-                        <td>Pendiente</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Kira</td>
-                        <td>Gato</td>
-                        <td>15-10-2021</td>
-                        <td>Calle 4 Ibague-Tolima</td>
-                        <td>Pendiente</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Otto</td>
-                        <td>Perro</td>
-                        <td>30-09-2021 2:45 pm</td>
-                        <td>Carrera 1 # 2-34 Espinal-Tolima</td>
-                        <td>Realizada</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Kira</td>
-                        <td>Gato</td>
-                        <td>30-09-2021 4:40pm</td>
-                        <td>Calle 4 Ibague-Tolima</td>
-                        <td>Realizada</td>
-                    </tr>
-
-                </tbody>
-            </table>
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 

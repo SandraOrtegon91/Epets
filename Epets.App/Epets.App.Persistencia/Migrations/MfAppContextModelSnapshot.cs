@@ -61,6 +61,9 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DateTime");
 
+                    b.Property<int?>("IdMascota")
+                        .HasColumnType("int");
+
                     b.Property<string>("Medicamento")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -74,6 +77,8 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnName("Recomendaciones");
 
                     b.HasKey("IdHistoria");
+
+                    b.HasIndex("IdMascota");
 
                     b.ToTable("Historia");
                 });
@@ -102,9 +107,6 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnType("real")
                         .HasColumnName("Estatura");
 
-                    b.Property<int?>("IdHistoria")
-                        .HasColumnType("int");
-
                     b.Property<int?>("IdPropietario")
                         .HasColumnType("int");
 
@@ -124,8 +126,6 @@ namespace Epets.App.Persistencia.Migrations
                         .HasColumnName("Raza");
 
                     b.HasKey("IdMascota");
-
-                    b.HasIndex("IdHistoria");
 
                     b.HasIndex("IdPropietario");
 
@@ -312,12 +312,17 @@ namespace Epets.App.Persistencia.Migrations
                     b.ToTable("TipoAnimalDb");
                 });
 
+            modelBuilder.Entity("Epets.App.Dominio.Entidades.Historia", b =>
+                {
+                    b.HasOne("Epets.App.Dominio.Entidades.Mascota", "Mascota")
+                        .WithMany()
+                        .HasForeignKey("IdMascota");
+
+                    b.Navigation("Mascota");
+                });
+
             modelBuilder.Entity("Epets.App.Dominio.Entidades.Mascota", b =>
                 {
-                    b.HasOne("Epets.App.Dominio.Entidades.Historia", "Historia")
-                        .WithMany()
-                        .HasForeignKey("IdHistoria");
-
                     b.HasOne("Epets.App.Dominio.Entidades.Propietario", "Propietario")
                         .WithMany()
                         .HasForeignKey("IdPropietario");
@@ -325,8 +330,6 @@ namespace Epets.App.Persistencia.Migrations
                     b.HasOne("Epets.App.Dominio.TipoAnimal", "TipoAnimal")
                         .WithMany()
                         .HasForeignKey("IdTipoAnimal");
-
-                    b.Navigation("Historia");
 
                     b.Navigation("Propietario");
 

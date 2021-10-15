@@ -7,73 +7,80 @@ using Epets.App.Persistencia.AppData;
 namespace Epets.App.Persistencia.AppRepositorios
 {
     public class RepositorioMedico :IRepositorioMedico
- {
-        /// <summary>
-        /// Referencia al contexto de la Medico
-        /// </summary>
-        private readonly MfAppContext _appContext;
-
-        /// <summary>Metodo constructor
-        /// que utiliza la inyeccion de dependencias
-        /// para indicar el contexto a utilizar </summary>
-        /// <param name="appContext"></param>
-  
-        public RepositorioMedico(MfAppContext appContext)
+    
+     {
+         //Implementamos el metodo para IRepositorio
+        public IEnumerable<Medico> GetAllMedicos()
         {
-            _appContext=appContext;
-        } 
+            //Cuerpo del Metodo
+            //conexion
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
 
-        //implementacion de los metodos de la interfaz
-        //Implementacion metodo Añadir Medico
-        Medico IRepositorioMedico.AddMedico(Medico medico)
-        {
-            var medicoAdicionado=_appContext.Medicos.Add(medico);
-            _appContext.SaveChanges();
-            return medicoAdicionado.Entity;
+                //Consulta Linq
+                var GetAllMedicos=(from p in Contexto.Medicos select p).ToList();
+                return GetAllMedicos;
+
+            }
+
+
         }
 
-        //Implementacion metodo Eliminar una Medico 
-        void IRepositorioMedico.DeleteMedico(int IdMedico)
+        //Implementacion del metodo de esa interfaz
+
+        public  Medico GetMedico(int Id){
+            //conexion
+             using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+                 //linq
+                 //var Empresa=(from p in Contexto.empresa where p.IdEmpresa==IdEmpresa select p);
+                 //return Empresa;
+
+                 //sintaxis e-f
+                 return Contexto.Medicos.SingleOrDefault(s=>s.Id==Id);
+
+             }
+        } 
+
+        public Medico AddMedico(Medico medico){
+           using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+               Contexto.Medicos.Add(medico);
+               Contexto.SaveChanges();
+              
+                   return medico;              
+           }
+
+        }
+
+        public Medico UpdateMedico(Medico medico){
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+               var ConsultaMedico=Contexto.Medicos.SingleOrDefault(s=>s.Id==medico.Id);
+
+               if (ConsultaMedico!=null){
+                   ConsultaMedico.TarjetaProfesional=medico.TarjetaProfesional;
+                   
+                   Contexto.SaveChanges();
+                                      
+               }
+               return ConsultaMedico;
+            }
+        }
+
+       void IRepositorioMedico.DeleteMedico(int Id)
         {
-            var medicoEncontrado=_appContext.Medicos.FirstOrDefault(p => p.Id==IdMedico);
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+            var medicoEncontrado=Contexto.Medicos.FirstOrDefault(p => p.Id==Id);
 
             if (medicoEncontrado==null)
                 return ;
             
-            _appContext.Medicos.Remove(medicoEncontrado);
-            _appContext.SaveChanges();
+            Contexto.Medicos.Remove(medicoEncontrado);
+            Contexto.SaveChanges();
 
-        }
+        }}
 
-        //Implementacion metodo retornar todos los Medicos
-        IEnumerable<Medico> IRepositorioMedico.GetAllMedicos()
-        {
-            return _appContext.Medicos;
-
-        }
-
-        //Implementacion metodo Retornar un Medico
-        Medico IRepositorioMedico.GetMedico(int IdMedico)
-        {
-            return _appContext.Medicos.FirstOrDefault(p => p.Id==IdMedico);
-
-        }
-
-        //Implementacion metodo Actualizar Medico
-        Medico IRepositorioMedico.UpdateMedico(Medico medico)
-        {
-            var medicoEncontrado=_appContext.Medicos.FirstOrDefault(p => p.Id==medico.Id);
-
-            if (medicoEncontrado!=null)
-                {
-                    medicoEncontrado.TarjetaProfesional=medico.TarjetaProfesional;
-                    medicoEncontrado.TipoAnimal=medico.TipoAnimal;
-
-                    _appContext.SaveChanges();
-                   
-                }
-            
-            return medicoEncontrado;
-        }
+      //
     }
 }

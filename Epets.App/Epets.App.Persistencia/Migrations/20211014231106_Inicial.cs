@@ -23,21 +23,6 @@ namespace Epets.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Historia",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DateTime = table.Column<DateTime>(type: "datetime2", maxLength: 12, nullable: false),
-                    Recomendaciones = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Medicamento = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Historia", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PropietariosDb",
                 columns: table => new
                 {
@@ -68,28 +53,6 @@ namespace Epets.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TipoSignoDb",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false),
-                    Temperatura = table.Column<int>(type: "int", nullable: false),
-                    Peso = table.Column<int>(type: "int", nullable: false),
-                    FrecuenciaCardiaca = table.Column<int>(type: "int", nullable: false),
-                    FrecuenciaRespiratoria = table.Column<int>(type: "int", nullable: false),
-                    EstadoAnimo = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TipoSignoDb", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TipoSignoDb_Historia_Id",
-                        column: x => x.Id,
-                        principalTable: "Historia",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "MascotaDb",
                 columns: table => new
                 {
@@ -101,18 +64,11 @@ namespace Epets.App.Persistencia.Migrations
                     Estatura = table.Column<float>(type: "real", nullable: false),
                     Raza = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     IdTipoAnimal = table.Column<int>(type: "int", nullable: true),
-                    IdPropietario = table.Column<int>(type: "int", nullable: true),
-                    IdHistoria = table.Column<int>(type: "int", nullable: true)
+                    IdPropietario = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MascotaDb", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_MascotaDb_Historia_IdHistoria",
-                        column: x => x.IdHistoria,
-                        principalTable: "Historia",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_MascotaDb_PropietariosDb_IdPropietario",
                         column: x => x.IdPropietario,
@@ -159,6 +115,28 @@ namespace Epets.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Historia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DateTime = table.Column<DateTime>(type: "datetime2", maxLength: 12, nullable: false),
+                    Recomendaciones = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Medicamento = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    IdMascota = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Historia", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Historia_MascotaDb_IdMascota",
+                        column: x => x.IdMascota,
+                        principalTable: "MascotaDb",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SolicitudVisitaDb",
                 columns: table => new
                 {
@@ -192,10 +170,32 @@ namespace Epets.App.Persistencia.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "TipoSignoDb",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Temperatura = table.Column<int>(type: "int", nullable: false),
+                    Peso = table.Column<int>(type: "int", nullable: false),
+                    FrecuenciaCardiaca = table.Column<int>(type: "int", nullable: false),
+                    FrecuenciaRespiratoria = table.Column<int>(type: "int", nullable: false),
+                    EstadoAnimo = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TipoSignoDb", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TipoSignoDb_Historia_Id",
+                        column: x => x.Id,
+                        principalTable: "Historia",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
-                name: "IX_MascotaDb_IdHistoria",
-                table: "MascotaDb",
-                column: "IdHistoria");
+                name: "IX_Historia_IdMascota",
+                table: "Historia",
+                column: "IdMascota");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MascotaDb_IdPropietario",
@@ -248,10 +248,10 @@ namespace Epets.App.Persistencia.Migrations
                 name: "EmpresaDb");
 
             migrationBuilder.DropTable(
-                name: "MascotaDb");
+                name: "Historia");
 
             migrationBuilder.DropTable(
-                name: "Historia");
+                name: "MascotaDb");
 
             migrationBuilder.DropTable(
                 name: "PropietariosDb");

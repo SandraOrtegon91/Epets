@@ -25,9 +25,13 @@ namespace Epets.App.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            
             //AddSIngleton para une uno a uno la persistencia con la interface
             //colocamos los repositorios y sus irepositorios, esto lo hacemos con todos, iniciando con la interface y luego el repositorio
             services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
+            //services.AddSingleton<IRepositorioMascota,RepositorioMascota>();
+           // services.AddSingleton<IRepositorioPropietario,RepositorioPropietario>();
+           // services.AddSingleton<IRepositorioEmpresa,RepositorioEmpresa>();
 
         }
 

@@ -6,10 +6,14 @@ namespace Epets.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioEmpresa
     {
+        #region  Firma metodos Empresa
         //firma de los metodos
 
         //Metodo para retornar todas las empresas
         IEnumerable<Empresa> GetAllEmpresas();
+
+              //Metodo para retornar una Empresa segun su Id
+        Empresa GetEmpresa(int IdEmpresa); 
 
         //metodo para adicionar una empresa
         Empresa AddEmpresa(Empresa empresa);
@@ -18,9 +22,10 @@ namespace Epets.App.Persistencia.AppRepositorios
         Empresa UpdateEmpresa(Empresa empresa);
 
         //Metodo para Eliminar Empresa
-        void DeleteEmpresa (int IdEmpresa);
+        bool DeleteEmpresa (int IdEmpresa);
 
-        //Metodo para retornar una Empresa segun su Id
-        Empresa GetEmpresa(int IdEmpresa);        
+        #endregion
+
+         
     }
 }

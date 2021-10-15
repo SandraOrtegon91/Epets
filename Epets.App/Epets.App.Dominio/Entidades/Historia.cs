@@ -31,6 +31,10 @@ namespace Epets.App.Dominio.Entidades
         [Column("Medicamento")]
         [StringLength(20,MinimumLength=5)]
         public string Medicamento{get;set;}
+
+         [ForeignKey("IdMascota")]
+        // Relacion entre Mascota y su Historia clínica
+        public virtual Mascota Mascota { get; set; }
                 
         [ForeignKey("IdTipoSigno")]
         //Referencia a la lista de signos vitales de una mascota
