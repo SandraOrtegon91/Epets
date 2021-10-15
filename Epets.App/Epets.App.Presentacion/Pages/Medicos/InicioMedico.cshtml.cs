@@ -18,7 +18,8 @@ namespace Epets.App.Presentacion.Pages
         //METODO DE INICIALIZACION DE LA PAGINA
         public void OnGet()
         {
-            Medicos=repositorioMedico.GetAllMedicos().ToList();            
+            Medicos=repositorioMedico.GetAllMedicos().ToList(); 
+                       
         }
 
         //constructor

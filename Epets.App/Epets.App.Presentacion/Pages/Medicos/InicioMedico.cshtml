@@ -157,34 +157,59 @@
                     </div>
                     <form class="main-form">
                         <div class="row">
+                            
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Cedula"
+                                <label>Cedula: </label>
+                                <input id=Cedula type="text" class="form-control" placeholder="Digite Cedula"
                                     style="margin-bottom: 20px;">
                             </div>
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Nombres"
+                                <label>Nombres: </label>
+                                <input id=Nombres type="text" class="form-control" placeholder="Digite Nombres"
                                     style="margin-bottom: 20px;">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
 
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Apellidos"
+                                <label>Apellidos: </label>
+                                <input id=Apellidos type="text" class="form-control" placeholder="Digite Apellidos"
                                     style="margin-bottom: 20px;">
                             </div>
 
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Tarjeta Profesional">
+                                <label>Tarjeta Profesional: </label>
+                                <input id=TarjetaProfesional type="text" class="form-control" placeholder="Digite Tarjeta Profesional" 
+                                style="margin-bottom: 20px;">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 20px;">
                             <div class="col-md-6 ">
-                                <input type="text" class="form-control" placeholder="Digite Telefono">
+                                <label>Telefono: </label>
+                                <input id=Telefono type="text" class="form-control" placeholder="Digite Telefono"
+                                style="margin-bottom: 20px;">
                             </div>
                             <div class="col-md-6 ">
+                                <label>Especialidad: </label>
                                 <select name="Tipo Animal" id="Especialidad" class="custom-select"
                                     style="margin-bottom: 20px;">
                                     <option value="Elija opcion">--Elija Especialidad--</option>
+                                    <option value="Opcion Perro">Perro</option>
+                                    <option value="Opcion Gato">Gato</option>
+                                    <option value="Opcion Pajaro">Pajaro</option>
+                                    <option value="Opcion todos">Perro, Gato, Pajaro</option>
+
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            
+                            <div class="col-md-6 ">
+                                <select name="Hospital" id="Hospital" class="custom-select"
+                                    style="margin-bottom: 20px;">
+                                    <option value="Elija opcion">--Elija Hospital--</option>
                                     <option value="Opcion Perro">Perro</option>
                                     <option value="Opcion Gato">Gato</option>
                                     <option value="Opcion Pajaro">Pajaro</option>
@@ -201,13 +226,12 @@
                             <button id="btnConsultar" type="submit" class="btn btn-secondary mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Consultar</button>
                             <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Registrar</button>
+                                style="margin-bottom: 20px; margin-left: 10px;" >Registrar</button>
                             <button id="btnActualizar" type="submit" class="btn btn-success mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
                             <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
-                            <button id="btnLimpiar" type="submit" class="btn btn-info mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Limpiar</button>
+                            <button id="btnLimpiar" type="submit" class="btn btn-info mt-3 wow zoomIn" onclick="Limpiar();" style="margin-bottom: 20px; margin-left: 10px;">Limpiar</button>
                         </div>
                     </form>
                 </div>
@@ -215,6 +239,7 @@
         </div>
         <div class="col-md-7 col-sm-12">
             <caption>
+                <label for="   "></label>
                 <h4>Listado Medicos</h4>
             </caption>
             <table class="table">
@@ -251,7 +276,26 @@
                             </td>
                             <td>
                                 @item.TarjetaProfesional
-                            </td>
+                            </td>                           
+                                 <td>
+                              
+                                <a href="/Medicos/BuscarMedico"><img src="~/img/iconos/Buscar.png" alt="" style="width: 30px;" title="¿Buscar?" asp-route-Id="@item.Id"></a>
+                                
+                                </td>
+                                <td>
+                               
+                                <a href="/Medicos/BuscarMedico"><img src="~/img/iconos/Guardar.png" alt="" style="width: 30px;" title="¿Guardar?" onclick="MensajeGuardar();"></a>
+                                </td>
+                                <td>
+                                    <a href="/Medicos/BuscarMedico"><img src="~/img/iconos/Actualizar.png" alt="" style="width: 30px;" title="¿Actualizar?" onclick="MensajeActualizar();"></a>
+                             
+                                </td>                               
+                                <td>
+                                     <a href="/Medicos/BuscarMedico"><img src="~/img/iconos/Eliminar.png" alt="" style="width: 30px;"title="¿Eliminar?" onclick="MensajeEliminar();"></a>
+                             
+                                </td>
+                          
+                             
                         </tr>
                         }
                     </tbody>
@@ -264,3 +308,36 @@
     </div> <!-- .page-section -->
 
 </div> <!-- .page-section -->
+
+<script>
+
+    function MensajeEliminar{
+        confirm ("¿Esta seguro de Eliminar el Registro?");
+    }
+     function MensajeActualizar{
+        confirm ("¿Esta seguro de Actualizar el Registro?");
+    }
+    function MensajeGuardar{
+        confirm ("¿Esta seguro de Guardar el Registro?");
+    }
+    function MensajeBuscar{
+        confirm ("¿Esta seguro de Buscar el Registro?");
+    }
+
+    function Limpiar(){
+        $("#Cedula").val('');
+        $("#Nombres").val('');
+        $("#Apellidos").val('');
+        $("#TarjetaProfesional").val('');
+        $("#Telefono").val('');
+
+
+    }
+
+    function CargarActualizacion(Id){
+
+        $("#Nombres").val(id);
+
+    }
+
+</script>

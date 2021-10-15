@@ -26,7 +26,7 @@ namespace Epets.App.Persistencia.AppRepositorios
         }
 
         //Implementacion del metodo de esa interfaz
-
+//buscar un medico por ID
         public  Medico GetMedico(int Id){
             //conexion
              using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
