@@ -10,7 +10,7 @@ namespace Epets.App.Dominio
     {
         [Key]
         [Column("Id")]
-        public int IdAnimal { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Column("T_Animal")]

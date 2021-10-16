@@ -9,32 +9,39 @@ using Epets.App.Dominio.Entidades;
 
 namespace Epets.App.Presentacion.Pages
 {
-    public class BuscarMedicoModel : PageModel
+    public class AgregarMedicoModel : PageModel
     {
          //Variable de tipo Interface
+         //CONSTRUCTOR para inicializar IRepositorio
+
+        
         private readonly IRepositorioMedico repositorioMedico;
         //Variable que contiene la asignacion del metodo brascar medicos
         public Epets.App.Dominio.Entidades.Medico Medicos{get;set;}
 
-        //CONSTRUCTOR
-        public BuscarMedicoModel(IRepositorioMedico repositorioMedico){
+        public AgregarMedicoModel(IRepositorioMedico repositorioMedico){
             
             this.repositorioMedico=repositorioMedico;
         }
+       
    
         //METODO DE INICIALIZACION DE LA PAGINA
-        public IActionResult OnGet(int Id)
+        public void OnGet()
         {
-            Medicos=repositorioMedico.GetMedico(Id);
+                                  
+        }
+         
+        public void OnPost(){
 
-            if (Medicos==null){
+             Medico medico= new Medico();
+             medico.Cedula=Medicos.Cedula;
+             medico.Nombre=Medicos.Nombre;
+             medico.Apellido=Medicos.Apellido;
+             medico.Telefono=Medicos.Telefono;
+             medico.TarjetaProfesional=Medicos.TarjetaProfesional;
 
-                return RedirectToPage("/PaginaNoEncontrada");
-            }
-            else{
-                return Page();
-            }
-                       
+             Medicos=repositorioMedico.AddMedico(medico);
+
         }
 
         
