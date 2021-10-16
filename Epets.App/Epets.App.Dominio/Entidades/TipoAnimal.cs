@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-namespace Epets.App.Dominio
+namespace Epets.App.Dominio.Entidades
 {
     [Table("TipoAnimalDb")]
     public class TipoAnimal
     {
         [Key]
         [Column("Id")]
-        public int Id { get; set; }
+        public int IdAnimal { get; set; }
 
         [Required]
         [Column("T_Animal")]

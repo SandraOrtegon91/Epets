@@ -9,25 +9,26 @@ using Epets.App.Dominio.Entidades;
 
 namespace Epets.App.Presentacion.Pages
 {
-    public class BuscarMedicoModel : PageModel
+    public class BuscarEmpresaModel : PageModel
     {
+        
          //Variable de tipo Interface
-        private readonly IRepositorioMedico repositorioMedico;
+        private readonly IRepositorioEmpresa repositorioEmpresa;
         //Variable que contiene la asignacion del metodo brascar medicos
-        public Epets.App.Dominio.Entidades.Medico Medicos{get;set;}
+        public Epets.App.Dominio.Entidades.Empresa Empresas{get;set;}
 
         //CONSTRUCTOR
-        public BuscarMedicoModel(IRepositorioMedico repositorioMedico){
+        public BuscarEmpresaModel(IRepositorioEmpresa repositorioEmpresa){
             
-            this.repositorioMedico=repositorioMedico;
+            this.repositorioEmpresa=repositorioEmpresa;
         }
    
         //METODO DE INICIALIZACION DE LA PAGINA
-        public IActionResult OnGet(int Id)
+        public IActionResult OnGet(int IdEmpresa)
         {
-            Medicos=repositorioMedico.GetMedico(Id);
+            Empresas=repositorioEmpresa.GetEmpresa(IdEmpresa);
 
-            if (Medicos==null){
+            if (Empresas==null){
 
                 return RedirectToPage("/PaginaNoEncontrada");
             }
@@ -41,3 +42,4 @@ namespace Epets.App.Presentacion.Pages
         
     }
 }
+

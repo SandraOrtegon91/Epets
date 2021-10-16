@@ -10,7 +10,8 @@ using Epets.App.Dominio.Entidades;
 namespace Epets.App.Presentacion.Pages
 {
     public class EditarMedicoModel : PageModel
-    {        //Variable de tipo Interface
+    {   
+             //Variable de tipo Interface
         private readonly IRepositorioMedico repositorioMedico;
         //Variable que contiene la asignacion del metodo brascar medicos
         public Epets.App.Dominio.Entidades.Medico Medicos{get;set;}
@@ -22,9 +23,9 @@ namespace Epets.App.Presentacion.Pages
         }
    
         //METODO DE INICIALIZACION DE LA PAGINA
-        public IActionResult OnGet(int Id)
+        public IActionResult OnGet(Medico medico)
         {
-            Medicos=repositorioMedico.GetMedico(Id);
+            Medicos=repositorioMedico.UpdateMedico(medico);
 
             if (Medicos==null){
 

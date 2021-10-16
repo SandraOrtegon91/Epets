@@ -145,108 +145,11 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5 col-sm-12">
-            <div class="page-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12" style="text-align: center;">
-                            <label>
-                                <h1 class="text-center wow fadeInUp">CRUD Medido</h1>
-                            </label>
-                        </div>
-                    </div>
-                    <form class="main-form">
-                        <div class="row">
-                            
-                            <div class="col-md-6 ">
-                                <label>Cedula: </label>
-                                <input id=Cedula type="text" class="form-control" placeholder="Digite Cedula"
-                                    style="margin-bottom: 20px;">
-                            </div>
-                            <div class="col-md-6 ">
-                                <label>Nombres: </label>
-                                <input id=Nombres type="text" class="form-control" placeholder="Digite Nombres"
-                                    style="margin-bottom: 20px;">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 20px;">
-
-                            <div class="col-md-6 ">
-                                <label>Apellidos: </label>
-                                <input id=Apellidos type="text" class="form-control" placeholder="Digite Apellidos"
-                                    style="margin-bottom: 20px;">
-                            </div>
-
-                            <div class="col-md-6 ">
-                                <label>Tarjeta Profesional: </label>
-                                <input id=TarjetaProfesional type="text" class="form-control" placeholder="Digite Tarjeta Profesional" 
-                                style="margin-bottom: 20px;">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 20px;">
-                            <div class="col-md-6 ">
-                                <label>Telefono: </label>
-                                <input id=Telefono type="text" class="form-control" placeholder="Digite Telefono"
-                                style="margin-bottom: 20px;">
-                            </div>
-                            <div class="col-md-6 ">
-                                <label>Especialidad: </label>
-                                <select name="Tipo Animal" id="Especialidad" class="custom-select"
-                                    style="margin-bottom: 20px;">
-                                    <option value="Elija opcion">--Elija Especialidad--</option>
-                                    <option value="Opcion Perro">Perro</option>
-                                    <option value="Opcion Gato">Gato</option>
-                                    <option value="Opcion Pajaro">Pajaro</option>
-                                    <option value="Opcion todos">Perro, Gato, Pajaro</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 20px;">
-                            
-                            <div class="col-md-6 ">
-                                <label>Especialidad: </label>
-                                <select name="Hospital" id="Hospital" class="custom-select"
-                                    style="margin-bottom: 20px;">
-                                    <option value="Elija opcion">--Elija Hospital--</option>
-                                    <option value="Opcion Perro">Mascota feliz</option>
-                                    <option value="Opcion Gato">ClinVet</option>
-                                    <option value="Opcion Pajaro">El establo</option>
-                                    <option value="Opcion todos">La Herradura</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                             <a class="btn btn-info mt-3 wow zoomIn" id="btnAtras"
-                             style="margin-bottom: 20px; margin-left: 10px;" href="/Medicos/InicioMedico" role="button">Nuevo Registro</a>
-                            
-                            <button id="btnConsultar" type="submit" class="btn btn-secondary mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Consultar</button>
-                            <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;" asp-page="/Medicos/InicioMedico">Registrar</button>
-                            <button id="btnActualizar" type="submit" class="btn btn-success mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
-                            <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
-
-                            <button id="btnLimpiar" type="submit" class="btn btn-info mt-3 wow zoomIn"
-                              style="margin-bottom: 20px; margin-left: 10px;" onclick="Limpiar();">Limpiar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-7 col-sm-12">
+        
+        <div class="col-md-12 col-sm-12">
             <caption>
                 <label for="   "></label>
-                <h4>Listado Medicos</h4>
+                <h2>Listado Medicos</h2>
             </caption>
             <table class="table">
                
@@ -258,6 +161,13 @@
                             <th scope="col">Apellidos</th>
                             <th scope="col">Telefono</th>
                             <th scope="col">N. Tarjeta Profesiona</th>
+                            <th scope="col">Especialidad</th>
+                            <th scope="col">Hospital</th>
+                            <th scope="col">     </th>
+                            <th scope="col">¿QUE </th>
+                            <th scope="col"> DESEAS</th>
+                            <th scope="col"> HACER </th>
+                             <th scope="col"> ?.. </th>
                             <!-- <th scope="col">Especialidad</th>   -->
                     </tr>
                     </thead>
@@ -282,7 +192,16 @@
                             </td>
                             <td>
                                 @item.TarjetaProfesional
-                            </td>                           
+                            </td>      
+                            <td>
+                                @item.TipoAnimal
+                            </td>    
+                            <td>
+                                @item.Empresa
+                            </td>   
+                            <td>
+                                
+                            </td>                 
                                  <td>
                                 
                                 
@@ -292,7 +211,7 @@
                                 </td>
                                 <td>
                                
-                                <a asp-page="/Medicos/AgregarMedico" asp-route-Id="@item.Id"><img src="~/img/iconos/Guardar.png" alt="" style="width: 30px;" title="¿Nuevo Medico?" onclick="MensajeGuardar();"></a>
+                                <a asp-page="/Medicos/AgregarMedico" ><img src="~/img/iconos/Guardar.png" alt="" style="width: 30px;" title="¿Nuevo Medico?" onclick="MensajeGuardar();"></a>
                                 </td>
                                 <td>
                                 <a asp-page="/Medicos/EditarMedico" asp-route-Id="@item.Id"><img src="~/img/iconos/Editar.png" alt="" style="width: 30px;" title="¿Editar?" ></a>

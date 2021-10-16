@@ -81,141 +81,75 @@
 
             
     <div class="row">
-        <div class="col-md-5 col-sm-12">
-            <div class="page-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12" style="text-align: center;">
-                            <label>
-                                <h1 class="text-center wow fadeInUp">CRUD Empresa</h1>
-                            </label>
-                        </div>
-                    </div>
-                    <form class="main-form">
-                        <div class="row">
-                            <div class="col-md-12 ">
-                                <input type="text" class="form-control" placeholder="Digite NIT de la empresa" style="margin-bottom: 20px;">
-                            </div>
-                            
-                        </div>
-                         <div class="row">
-                          
-                            <div class="col-md-12 ">
-                                <input type="text" class="form-control" placeholder="Digite Nombre de la empresa" style="margin-bottom: 20px;">
-                            </div>
-                        </div>
-                        
-                        
-
-                        <div class="row">
-                            <button id="btnConsultar" type="submit" class="btn btn-secondary mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Consultar</button>
-                            <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Registrar</button>
-                            <button id="btnActualizar" type="submit" class="btn btn-success mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Actualizar</button>
-                            <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
-                                style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-7 col-sm-12">
-            <caption><h4>Listado Empresas </h4></caption>
+        
+        <div class="col-md-12 col-sm-12">
+            <label for="  "></label>
+            <caption><h2>Listado Empresas </h2></caption>
             <table class="table">
                 <!-- <Mascotas a Cargo</caption>-->
                 <thead>
                     <tr class="bg-warning" id="tablaj">
+
                         <th scope="col">Codigo</th>
-                        <th scope="col">Nit Empresa</th>
                         <th scope="col">Nombre Empresa </th>
+                        <th scope="col">Nit Empresa</th>
+                        <th scope="col">Direccion Empresa </th>
+                        <th scope="col">     </th>
+                        <th scope="col">¿QUE </th>
+                        <th scope="col"> DESEAS</th>
+                        <th scope="col"> HACER </th>
+                        <th scope="col"> ?.. </th>
                       
 
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>O2345RGH</td>
-                        <td>Mascota Feliz</td>
-                        
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>12345058HGJ</td>
-                        <td>VetPet</td>
-                    </tr>
-                    <tr>
-                         <th scope="row">3</th>
-                        <td>1456664RGH</td>
-                        <td>CanCatVet</td>
+               <tbody>
+                    @foreach (var item in Model.Empresas)
+                    {
+                        <tr>
+                            <td>
+                                @item.IdEmpresa
+                            </td>
+                            <td>
+                                @item.NombreEmpresa
+                            </td>
+                            <td>
+                                @item.Nit
+                            </td>
+                            <td>
+                                @item.DireccionEmpresa
+                            </td>
+                                                            
+                            <td>
+                                
+                            </td>                 
+                                 <td>
+                                
+                                
 
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                         <td>123445HGH</td>
-                        <td>El Establo</td>
-                    </tr>
-                </tbody>
+                                <a asp-page="/Empresas/BuscarEmpresa" asp-route-IdEmpresa="@item.IdEmpresa"><img src="~/img/iconos/Buscar.png"  alt="" style="width: 30px;"  title="¿Buscar?" ></a>
+                                
+                                </td>
+                                <td>
+                               
+                                <a asp-page="/Empresas/AgregarEmpresa" ><img src="~/img/iconos/Guardar.png" alt="" style="width: 30px;" title="¿Nuevo Empresa?" onclick="MensajeGuardar();"></a>
+                                </td>
+                                <td>
+                                <a asp-page="/Empresas/EditarEmpresa" asp-route-IdEmpresa="@item.IdEmpresa"><img src="~/img/iconos/Editar.png" alt="" style="width: 30px;" title="¿Editar?" ></a>
+                             
+                                </td>                               
+                                <td>
+                                <a asp-page="/Empresas/BuscarEmpresa" asp-route-IdEmpresa="@item.IdEmpresa"><img src="~/img/iconos/Eliminar.png" alt="" style="width: 30px;"title="¿Eliminar?" onclick="MensajeEliminar();"></a>
+                             
+                                </td>
+                          
+                             
+                        </tr>
+                        }
+                    </tbody>
             </table>
-            <caption><h4>Listado Medicos Vinculados </h4></caption>
-            <table class="table">
-                <!-- <Mascotas a Cargo</caption>-->
-                <thead>
-                    <tr class="bg-warning" id="tablaj">
-                        <th scope="col">Codigo</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Nombres </th>
-                        <th scope="col">Apellidos</th>
-                        <th scope="col">N. Tarjeta Profesiona</th>
-                        <th scope="col">Telefono</th>
-                        <th scope="col">Especialidad</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-
-                        <td>1106789789</td>
-                        <td>Samuel</td>
-                        <td>Rodriguez</td>
-                        <td>O2345RGH</td>
-                        <td>3112345432</td>
-                        <td>Perro</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-
-                        <td>1110524169</td>
-                        <td>German</td>
-                        <td>Ospina</td>
-                        <td>234520ULB</td>
-                        <td>3214748012</td>
-                        <td>Gato</td>
-                    </tr>
-                    <tr>
-                         <th scope="row">3</th>
-                        <td>1105682311</td>
-                        <td>Sandra</td>
-                        <td>Ortegon</td>
-                        <td>1789005YUO</td>
-                        <td>3133958228</td>
-                        <td>Perro</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                         <td>1021067801</td>
-                        <td>Jhan</td>
-                        <td>Meneses</td>
-                        <td>567296HYTR</td>
-                        <td>3124567890</td>
-                        <td>Pajaro</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+           
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 

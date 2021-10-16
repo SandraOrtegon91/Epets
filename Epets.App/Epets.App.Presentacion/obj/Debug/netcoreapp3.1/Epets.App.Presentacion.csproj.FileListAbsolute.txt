@@ -92,3 +92,6 @@ C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\PaginaNoEncontrada.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\EditarMedico.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\AgregarMedico.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\BuscarEmpresa.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\EditarEmpresa.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Empresas\AgregarEmpresa.cshtml.g.cs

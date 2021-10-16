@@ -72,7 +72,7 @@
                         <nav aria-label="Breadcrumb">
                             <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
                                 <li class="breadcrumb-item"><a href="/Index">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Veterinarios_ Registrar NUevo Medico</li>
+                                <li class="breadcrumb-item active" aria-current="page">Veterinarios_ Registrar Nuevo Medico</li>
                             </ol>
                         </nav>
                         <h1 class="font-weight-normal">Registrar Nuevo Medico</h1>
@@ -89,11 +89,11 @@
                     <div class="row">
                         <div class="col-md-12" style="text-align: center;">
                             <label>
-                                <h1 class="text-center wow fadeInUp">Datos Medido</h1>
+                                <h1 class="text-center wow fadeInUp">Datos Medico</h1>
                             </label>
                         </div>
                     </div>
-                    <form class="main-form" method="post">
+                    <form class="main-form" method="post" >
                         <div class="row">
                             
                             <div class="col-md-6 ">
@@ -128,15 +128,11 @@
                                 style="margin-bottom: 20px;">
                             </div>
                             <div class="col-md-6 ">
-                                <label>Especialidad: </label>
-                                <select name="Tipo Animal" id="Especialidad" class="custom-select"
+                                <label asp-for="Medicos.TipoAnimal">Especialidad: </label>
+                                <select name="Tipo Animal" id="Especialidad" asp-items='@new SelectList(Model.TipoAnimales,"IdAnimal","T_Animal")' class="custom-select"
                                     style="margin-bottom: 20px;">
                                     <option value="Elija opcion">--Elija Especialidad--</option>
-                                    <option value="Opcion Perro">Perro</option>
-                                    <option value="Opcion Gato">Gato</option>
-                                    <option value="Opcion Pajaro">Pajaro</option>
-                                    <option value="Opcion todos">Perro, Gato, Pajaro</option>
-
+                                   
                                 </select>
 
 
@@ -145,14 +141,11 @@
                         <div class="row" style="margin-bottom: 20px;">
                             
                             <div class="col-md-6 ">
-                                <label>Especialidad: </label>
-                                <select name="Hospital" id="Hospital" class="custom-select"
+                                <label asp-for="Medicos.Empresa">Hospital: </label>
+                                <select name="Hospital" id="Hospitales" asp-items='@new SelectList(Model.Empresas,"IdEmpresa","NombreEmpresa")' class="custom-select"
                                     style="margin-bottom: 20px;">
                                     <option value="Elija opcion">--Elija Hospital--</option>
-                                    <option value="Opcion Perro">Mascota feliz</option>
-                                    <option value="Opcion Gato">ClinVet</option>
-                                    <option value="Opcion Pajaro">El establo</option>
-                                    <option value="Opcion todos">La Herradura</option>
+                                   
 
                                 </select>
 
@@ -166,8 +159,9 @@
                             <button id="btnRegistrar" type="submit" class="btn btn-primary mt-3 wow zoomIn"
                                 style="margin-bottom: 20px; margin-left: 10px;" asp-page="/Medicos/AgregarMedico">Registrar</button>
                             
-                            <button id="btnLimpiar" type="submit" class="btn btn-info mt-3 wow zoomIn"
-                              style="margin-bottom: 20px; margin-left: 10px;" onclick="Limpiar();">Limpiar</button>
+                             <a class="btn btn-info mt-3 wow zoomIn" id="btnLimpiar"
+                             style="margin-bottom: 20px; margin-left: 10px;" href="/Medicos/AgregarMedico" role="button">Limpiar</a>
+                            
                                <a class="btn btn-info mt-3 wow zoomIn" id="btnAtras"
                              style="margin-bottom: 20px; margin-left: 10px;" href="/Medicos/InicioMedico" role="button">Atras</a>
                             

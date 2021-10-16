@@ -29,11 +29,11 @@ namespace Epets.App.Presentacion
             //AddSIngleton para une uno a uno la persistencia con la interface
             //colocamos los repositorios y sus irepositorios, esto lo hacemos con todos, iniciando con la interface y luego el repositorio
             services.AddSingleton<IRepositorioMedico,RepositorioMedico>();
-            //services.AddSingleton<IRepositorioTipoAnimal,RepositorioTipoAnimal>();
+            services.AddSingleton<IRepositorioTipoAnimal,RepositorioTipoAnimal>();
 
             //services.AddSingleton<IRepositorioMascota,RepositorioMascota>();
            // services.AddSingleton<IRepositorioPropietario,RepositorioPropietario>();
-           // services.AddSingleton<IRepositorioEmpresa,RepositorioEmpresa>();
+           services.AddSingleton<IRepositorioEmpresa,RepositorioEmpresa>();
 
         }
 

@@ -21,7 +21,6 @@ namespace Epets.App.Presentacion.Pages
             Medicos=repositorioMedico.GetAllMedicos().ToList(); 
                        
         }
-        
 
         //constructor
         public InicioMedicoModel(IRepositorioMedico repositorioMedico)

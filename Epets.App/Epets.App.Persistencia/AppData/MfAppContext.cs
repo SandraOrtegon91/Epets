@@ -13,7 +13,7 @@ namespace Epets.App.Persistencia.AppData
         public DbSet<Epets.App.Dominio.Entidades.Medico> Medicos {get;set;}
         public DbSet<Epets.App.Dominio.Entidades.Propietario> Propietarios {get;set;} 
         public DbSet<Epets.App.Dominio.Entidades.SolicitudVisita> SolicitudVisitas {get;set;}
-      //  public DbSet<Epets.App.Dominio.Entidades.TipoAnimal> TipoAnimales {get;set;}
+        public DbSet<Epets.App.Dominio.Entidades.TipoAnimal> TipoAnimales {get;set;}
         public DbSet<Epets.App.Dominio.Entidades.TipoSigno> TipoSignos {get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

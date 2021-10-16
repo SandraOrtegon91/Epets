@@ -13,21 +13,33 @@ namespace Epets.App.Presentacion.Pages
     {
          //Variable de tipo Interface
          //CONSTRUCTOR para inicializar IRepositorio
-
         
+        private readonly IRepositorioTipoAnimal repositorioTipoAnimal;
+        private readonly IRepositorioEmpresa repositorioEmpresa;        
         private readonly IRepositorioMedico repositorioMedico;
         //Variable que contiene la asignacion del metodo brascar medicos
         public Epets.App.Dominio.Entidades.Medico Medicos{get;set;}
+        public List<Epets.App.Dominio.Entidades.TipoAnimal> TipoAnimales =new List<TipoAnimal>();
+        public List<Epets.App.Dominio.Entidades.Empresa> Empresas =new List<Empresa>();
 
-        public AgregarMedicoModel(IRepositorioMedico repositorioMedico){
+        public AgregarMedicoModel(IRepositorioMedico repositorioMedico, IRepositorioTipoAnimal repositorioTipoAnimal,IRepositorioEmpresa repositorioEmpresa ){
             
             this.repositorioMedico=repositorioMedico;
+            this.repositorioTipoAnimal=repositorioTipoAnimal;
+            this.repositorioEmpresa=repositorioEmpresa;
+            
         }
+
+        
        
    
         //METODO DE INICIALIZACION DE LA PAGINA
-        public void OnGet()
+        public async Task OnGet()
         {
+            TipoAnimales=repositorioTipoAnimal.GetAllTipoAnimales().ToList();
+            Empresas=repositorioEmpresa.GetAllEmpresas().ToList();
+
+
                                   
         }
          
