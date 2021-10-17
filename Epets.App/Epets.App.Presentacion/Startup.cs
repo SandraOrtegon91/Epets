@@ -32,7 +32,7 @@ namespace Epets.App.Presentacion
             services.AddSingleton<IRepositorioTipoAnimal,RepositorioTipoAnimal>();
 
             //services.AddSingleton<IRepositorioMascota,RepositorioMascota>();
-           // services.AddSingleton<IRepositorioPropietario,RepositorioPropietario>();
+           services.AddSingleton<IRepositorioPropietario,RepositorioPropietario>();
            services.AddSingleton<IRepositorioEmpresa,RepositorioEmpresa>();
 
         }

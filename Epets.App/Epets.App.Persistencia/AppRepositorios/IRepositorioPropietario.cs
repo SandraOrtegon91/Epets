@@ -6,21 +6,25 @@ namespace Epets.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioPropietario
     {
-        //firma de los metodos
+        #region  Firma metodos Propietarios
+         //firma de los metodos
 
-        //Metodo para retornar todas las propietarios
+        //Metodo para retornar todos los medicos
         IEnumerable<Propietario> GetAllPropietarios();
 
-        //metodo para adicionar un propietario
+        //Metodo para retornar un medico segun su Id
+        Propietario GetPropietario(int Id);
+
+        //metodo para adicionar un medico
         Propietario AddPropietario(Propietario propietario);
 
-        //Metodo para Actualizar propietario
+        //Metodo para Actualizar medico
         Propietario UpdatePropietario(Propietario propietario);
 
-        //Metodo para Eliminar propietario
-        void DeletePropietario (int IdPropietario);
+        //Metodo para Eliminar medico
+        void DeletePropietario (int Id);
 
-        //Metodo para retornar un propietario segun su Id
-        Propietario GetPropietario(int IdPropietario);
+        #endregion
+
     }
 }

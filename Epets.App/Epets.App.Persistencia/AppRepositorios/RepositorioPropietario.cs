@@ -6,72 +6,80 @@ using Epets.App.Persistencia.AppData;
 
 namespace Epets.App.Persistencia.AppRepositorios
 {
-    public class RepositorioPropietario : IRepositorioPropietario
+    public class RepositorioPropietario:IRepositorioPropietario
 {
-        /// <summary>
-        /// Referencia al contexto del Propietario
-        /// </summary>
-        private readonly MfAppContext _appContext;
-
-        /// <summary>Metodo constructor
-        /// que utiliza la inyeccion de dependencias
-        /// para indicar el contexto a utilizar </summary>
-        /// <param name="appContext"></param>
-     
-        public RepositorioPropietario(MfAppContext appContext)
+        //Implementamos el metodo para IRepositorio
+        public IEnumerable<Propietario> GetAllPropietarios()
         {
-            _appContext=appContext;
-        } 
+            //Cuerpo del Metodo
+            //conexion
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
 
-        //implementacion de los metodos de la interfaz
-        //Implementacion metodo Añadir Propietario
-        Propietario IRepositorioPropietario.AddPropietario(Propietario propietario)
-        {
-            var propietarioAdicionado=_appContext.Propietarios.Add(propietario);
-            _appContext.SaveChanges();
-            return propietarioAdicionado.Entity;
+                //Consulta Linq
+                var GetAllPropietarios=(from p in Contexto.Propietarios select p).ToList();
+                return GetAllPropietarios;
+
+            }
+
+
         }
 
-        //Implementacion metodo Eliminar un Propietario 
-        void IRepositorioPropietario.DeletePropietario(int IdPropietario)
+        //Implementacion del metodo de esa interfaz
+//buscar un medico por ID
+        public Propietario GetPropietario(int Id){
+            //conexion
+             using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+                 //linq
+                 //var Empresa=(from p in Contexto.empresa where p.IdEmpresa==IdEmpresa select p);
+                 //return Empresa;
+
+                 //sintaxis e-f
+                 return Contexto.Propietarios.SingleOrDefault(s=>s.Id==Id);
+
+             }
+        } 
+
+        public Propietario AddPropietario(Propietario propietario){
+           using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+               Contexto.Propietarios.Add(propietario);
+               Contexto.SaveChanges();
+              
+                   return propietario;              
+           }
+
+        }
+
+        public Propietario UpdatePropietario (Propietario propietario){
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+               var ConsultaPropietario=Contexto.Propietarios.SingleOrDefault(s=>s.Id==propietario.Id);
+
+               if (ConsultaPropietario!=null){
+                   ConsultaPropietario.Direccion=propietario.Direccion;
+                   
+                   Contexto.SaveChanges();
+                                      
+               }
+               return ConsultaPropietario;
+            }
+        }
+
+       void IRepositorioPropietario.DeletePropietario(int Id)
         {
-            var propietarioEncontrado=_appContext.Propietarios.FirstOrDefault(p => p.Id==IdPropietario);
+            using(AppData.MfAppContext Contexto= new AppData.MfAppContext()){
+
+            var propietarioEncontrado=Contexto.Propietarios.FirstOrDefault(p => p.Id==Id);
 
             if (propietarioEncontrado==null)
                 return ;
             
-            _appContext.Propietarios.Remove(propietarioEncontrado);
-            _appContext.SaveChanges();
+            Contexto.Propietarios.Remove(propietarioEncontrado);
+            Contexto.SaveChanges();
 
-        }
+        }}
 
-        //Implementacion metodo retornar todas los Propietarios
-        IEnumerable<Propietario> IRepositorioPropietario.GetAllPropietarios()
-        {
-            return _appContext.Propietarios;
-
-        }
-
-        //Implementacion metodo Retornar un Propietario
-        Propietario IRepositorioPropietario.GetPropietario(int IdPropietario)
-        {
-            return _appContext.Propietarios.FirstOrDefault(p => p.Id==IdPropietario);
-
-        }
-
-        //Implementacion metodo Actualizar Propietario
-        Propietario IRepositorioPropietario.UpdatePropietario(Propietario propietario)
-        {
-            var propietarioEncontrado=_appContext.Propietarios.FirstOrDefault(p => p.Id==propietario.Id);
-
-            if (propietarioEncontrado!=null)
-                {
-                    propietarioEncontrado.Direccion=propietario.Direccion;
-
-                    _appContext.SaveChanges();                   
-                }
-            
-            return propietarioEncontrado;
-        }
+      //
     }
 }

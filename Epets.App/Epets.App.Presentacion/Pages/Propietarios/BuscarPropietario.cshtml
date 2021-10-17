@@ -1,0 +1,151 @@
+﻿@page
+@model Epets.App.Presentacion.Pages.BuscarPropietarioModel
+@{ViewData["Title"] = "E-Pets-Propietarios";
+}
+<style>
+    tr:hover {
+        background-color: rgb(252, 255, 95);
+    }
+
+    #jhan {
+        border-radius: 150%;
+        height: 50px;
+        width: 50px;
+        font-size: 1px;
+
+    }
+    #BannerPropietarios{
+        
+        
+        background-image: url("../img/Banner_Dueños.jpg");
+    }
+
+    #jhan:hover {
+        border-radius: 0%;
+        height: 50px;
+        width: 100px;
+        font-size: 30px;
+
+    }
+
+    #btnConsultar:hover{
+        background-color: #BBBBBB;
+    }
+
+     #btnRegistrar:hover{
+        background-color: #0DC7E5;
+    }
+
+    #btnActualizar:hover{
+        background-color: #10D691;
+    }
+
+    #btnEliminar:hover{
+        background-color: #FE5D6E;
+    }
+
+
+    #imagen {
+        border-top-left-radius: 70%;
+    }
+
+    #Cardimagen:hover #imagen {
+        border-top-left-radius: 0px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <h1 class="display-4">Bienvenido a Buscar Propietarios</h1>
+                <p>MinTic-2021 <a href="/Grupo_4/InicioGrupo_4">Grupo_4</a>.</p>
+            </div>
+
+            <div id="BannerPropietarios" class="page-banner overlay-dark bg-image">
+                <div class="banner-section">
+                    <div class="container text-center wow fadeInUp">
+                        <nav aria-label="Breadcrumb">
+                            <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+                                <li class="breadcrumb-item"><a href="/Index">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Buscar Propietarios</li>
+                            </ol>
+                        </nav>
+                        <h1 class="font-weight-normal">Datos Propietarios</h1>
+                    </div> <!-- .container -->
+                </div> <!-- .banner-section -->
+            </div> <!-- .page-banner -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <div class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center;">
+                            <label>
+                                <h1 class="text-center wow fadeInUp">Datos Propietarios</h1>
+                            </label>
+                        </div>
+                    </div>
+                   <form class="main-form">
+                        <div class="row">
+                            
+                            <div class="col-md-6 ">
+                                <label>Codigo: </label>
+                                <input id=Codigo type="text" class="form-control" placeholder="@Model.Propietarios.Id" disabled
+                                    style="margin-bottom: 20px;">
+                            </div>
+                            <div class="col-md-6 ">
+                                <label>Cedula: </label>
+                                <input id=Cedula type="text" class="form-control" placeholder="@Model.Propietarios.Cedula" disabled
+                                    style="margin-bottom: 20px;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+
+                            <div class="col-md-6 ">
+                                <label>Nombres: </label>
+                                <input id=Nombres type="text" class="form-control" placeholder="@Model.Propietarios.Nombre" disabled
+                                    style="margin-bottom: 20px;">
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <label>Apellidos: </label>
+                                <input id=Apellidos type="text" class="form-control" placeholder="@Model.Propietarios.Apellido" disabled
+                                    style="margin-bottom: 20px;">
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <div class="col-md-6 ">
+                                <label>Direccion: </label>
+                                <input id=TarjetaProfesional type="text" class="form-control" placeholder="@Model.Propietarios.Direccion" disabled 
+                                style="margin-bottom: 20px;">
+                            </div>
+                            
+                            <div class="col-md-6 ">
+                                <label>Telefono: </label>
+                                <input id=Telefono type="text" class="form-control" placeholder="@Model.Propietarios.Telefono"  disabled
+                                style="margin-bottom: 20px;">
+                            </div>
+                        </div>
+                       
+
+
+                        <div class="row">
+                            <button id="btnEliminar" type="submit" class="btn btn-danger mt-3 wow zoomIn"
+                                style="margin-bottom: 20px; margin-left: 10px;">Eliminar</button>
+                                <a class="btn btn-info mt-3 wow zoomIn" id="btnAtras"
+                             style="margin-bottom: 20px; margin-left: 10px;" href="/Propietarios/InicioPropietario" role="button">Atras</a>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+     
+    </div> <!-- .page-section -->
+
+</div> <!-- .page-section -->
+
