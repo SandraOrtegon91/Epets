@@ -98,3 +98,4 @@ C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\BuscarPropietario.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\AgregarPropietario.cshtml.g.cs
 C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Propietarios\EditarPropietario.cshtml.g.cs
+C:\Epets.App-main\Epets.App\Epets.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Medicos\BuscarMedico2.cshtml.g.cs
